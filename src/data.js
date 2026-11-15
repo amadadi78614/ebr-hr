@@ -1,91 +1,97 @@
-// HR & Payroll (HRO) EBR content. Source: previous HRO section (cwipebr) and HRO correspondence (Nov 2026).
+// HR & Payroll (HRO) EBR. Source: previous HRO EBR content (cwipebr) and HRO correspondence (Nov 2026).
 const CONFIG = {
   key: 'hr',
   domain: 'HR & Payroll',
-  title: 'HR & Payroll Executive Business Review',
   period: 'H1 FY27',
-  accent: '#059669',
-  source: 'Source: previous HRO EBR content · HRO EBR 23 Nov 2026',
+  accent: '#10b981',
+  accent2: '#06b6d4',
+  source: 'HRO EBR content · HRO EBR 23 Nov 2026',
   tabs: [
     {
-      id: 'highlights',
-      label: 'Highlights',
-      title: 'Highlights',
-      sub: 'Delivered in FY26',
+      id: 'highlights', label: 'Highlights', title: 'What HR and Payroll delivered',
       blocks: [
         {
-          type: 'cards', span: 12, rows: 2, cols: 3, title: 'FY26 delivery',
-          items: [
-            { tag: 'PayMeNow', title: 'Payroll implementation support', text: 'Rollout and payroll configuration support across the Telkom payroll environment.', status: 'delivered' },
-            { tag: 'PRMA', title: 'SharePoint reconciliation', text: 'Manual Excel reconciliation replaced by SharePoint consolidation. Better accuracy and turnaround.', status: 'delivered' },
-            { tag: 'Blueprint', title: 'HR and payroll processes', text: 'End-to-end HR and payroll processes mapped and documented as the standard blueprint.', status: 'progress' },
-            { tag: 'TRF', title: 'Employee transition', text: 'TRF employees separated into a dedicated company and payroll structure.', status: 'delivered' },
-            { tag: 'B-BBEE', title: 'Skills analytics model', text: 'Skills B-BBEE model aligned with the verification agency for FY26 reporting.', status: 'delivered' },
-            { tag: 'Recognition', title: 'WNS BPET League Award 2026', text: 'Consistent VOC scores on the Telkom Shared Services account.' },
+          type: 'hero', items: [
+            { value: '5', label: 'Programmes delivered', sub: 'Payroll, reconciliation, transition, B-BBEE', tone: 'good' },
+            { value: '6', label: 'FY27 focus areas', sub: 'Automation to integration' },
+            { value: '1', label: 'WNS BPET League Award', sub: 'Consistent VOC scores' },
+            { value: '23 Nov', label: 'Org structure in SuccessFactors', sub: 'Due for this HRO EBR', tone: 'warn' },
           ],
         },
         {
-          type: 'list', span: 12, title: 'Open item for this EBR',
+          type: 'cards', span: 12, cols: 3, rows: 2, title: 'Delivered · click for detail',
           items: [
-            { title: 'Organisation structure update in SuccessFactors', text: 'Requested by Telkom HR for the 23 November HRO EBR. SuccessFactors access granted 21 October.', status: 'progress' },
+            { icon: 'Banknote', name: 'PayMeNow payroll support', line: 'Rollout and configuration', status: 'delivered', detail: { text: 'Full rollout and payroll configuration support across the Telkom payroll environment.' } },
+            { icon: 'Table2', name: 'PRMA SharePoint reconciliation', line: 'Excel replaced by SharePoint', status: 'delivered', detail: { text: 'Manual Excel reconciliation replaced by SharePoint consolidation: better accuracy and turnaround.' } },
+            { icon: 'Workflow', name: 'HR and payroll blueprint', line: 'End-to-end processes mapped', status: 'progress', detail: { text: 'Defining the standard HR and payroll business process blueprint.' } },
+            { icon: 'Users', name: 'TRF employee transition', line: 'Separate company and payroll', status: 'delivered' },
+            { icon: 'BarChart3', name: 'Skills B-BBEE model', line: 'Aligned with verification agency', status: 'delivered' },
+            { icon: 'Award', name: 'BPET League Award 2026', line: 'Telkom Shared Services campaign', status: 'complete' },
           ],
         },
       ],
     },
     {
-      id: 'rpa',
-      label: 'Transformation and RPA',
-      title: 'Transformation and RPA',
-      sub: 'FY27 focus areas',
+      id: 'rpa', label: 'Transformation', title: 'Six moves for FY27',
       blocks: [
         {
-          type: 'kpis',
+          type: 'cards', span: 12, cols: 3, rows: 2, title: 'FY27 focus areas · click for detail',
           items: [
-            { value: '6', label: 'FY27 focus areas' },
-            { value: '1', label: 'In progress', note: 'Automation and analytics' },
-            { value: '1', label: 'Status to confirm', note: 'EC and ECP after UAT' },
-            { value: '4', label: 'Planned' },
-          ],
-        },
-        {
-          type: 'cards', span: 12, cols: 3, rows: 2, title: 'FY27 focus areas',
-          items: [
-            { tag: '01', title: 'Automation and analytics', text: 'Automation across payroll and HR admin, and the next step in analytics.', status: 'progress' },
-            { tag: '02', title: 'ATR and Skills B-BBEE', text: 'Improve data capture to enable real-time reporting.', status: 'planned' },
-            { tag: '03', title: 'EC and ECP implementation', text: 'UAT from 12 May to end June 2026, then production rollout.', status: 'confirm' },
-            { tag: '04', title: 'Third-party payroll deductions', text: 'Remove third-party deductions; keep statutory deductions only (PAYE, UIF).', status: 'planned' },
-            { tag: '05', title: 'SAP Fiori rollout', text: 'ESS for leave, approvals and payslips on mobile.', status: 'planned' },
-            { tag: '06', title: 'System integration', text: 'Upstream and downstream integration across HR and payroll systems.', status: 'planned' },
+            { icon: 'Bot', name: 'Automation and analytics', line: 'Payroll and HR admin streams', status: 'progress' },
+            { icon: 'BarChart3', name: 'ATR and Skills B-BBEE', line: 'Real-time reporting', status: 'planned' },
+            { icon: 'Cpu', name: 'EC and ECP', line: 'UAT May to June 2026', status: 'confirm', detail: { text: 'UAT scheduled 12 May to end June 2026; production rollout to follow. Confirm go-live.' } },
+            { icon: 'Scissors', name: 'Third-party deductions', line: 'Statutory deductions only', status: 'planned', detail: { text: 'Delimit all third-party payroll deductions; retain PAYE, UIF and other statutory deductions.' } },
+            { icon: 'Smartphone', name: 'SAP Fiori ESS', line: 'Leave, approvals, payslips on mobile', status: 'planned' },
+            { icon: 'Network', name: 'System integration', line: 'Upstream and downstream, real time', status: 'planned' },
           ],
         },
       ],
     },
     {
-      id: 'way-forward',
-      label: 'Way forward',
-      title: 'Way forward',
-      sub: 'AI use cases and controls',
+      id: 'ai', label: 'AI opportunities', title: 'AI that protects every payroll run',
       blocks: [
         {
-          type: 'table', span: 7, rows: 2, title: 'AI use cases for HR and payroll',
-          columns: ['Area', 'Use', 'Benefit', 'Risk'],
-          rows: [
-            ['Payroll', 'Compliance checks, anomaly detection', 'Accuracy and efficiency', 'Data privacy, system errors'],
-            ['HR admin', 'Drafting documents and communications', 'Speed, less manual work', 'Needs human review'],
-            ['Workforce planning', 'Predictive analytics', 'Better hiring, lower attrition', 'Needs quality data'],
-            ['Employee queries', 'Chatbot for payslips and leave', '24/7 answers', 'Over-reliance on automation'],
-            ['Governance', 'HR and IT co-ownership, AI policy', 'Secure data, fairness', 'Implementation effort'],
+          type: 'stairs', span: 5, rows: 3, title: 'HR and payroll AI maturity', current: 1, target: 3, targetLabel: 'FY28',
+          levels: ['Manual', 'Managed', 'Automated', 'Predictive', 'Agent-assisted'],
+          footnote: 'EC/ECP and system integration are the data foundation.',
+        },
+        {
+          type: 'stepper', span: 7, rows: 3, title: 'Flagship pilot · Payroll assurance agent', note: 'Proposed · not live',
+          steps: [
+            { name: 'Ingest', icon: 'Database', title: 'Read the payroll run before release', points: ['EC / ECP data', 'Deductions', 'Prior runs'] },
+            { name: 'Compare', icon: 'GitCompareArrows', title: 'Compare to rules and history', points: ['Tax rules', 'Variance by employee'] },
+            { name: 'Flag', icon: 'AlertTriangle', title: 'Flag anomalies and fraud signals', points: ['Unusual payments', 'Duplicate banking details'] },
+            { name: 'Explain', icon: 'MessageSquare', title: 'Explain each flag in plain language', points: ['Evidence attached'] },
+            { name: 'Approve', icon: 'UserCheck', title: 'Payroll lead approves', points: ['Human decision', 'POPIA controls'] },
+            { name: 'Release', icon: 'ShieldCheck', title: 'Release a clean payroll', points: ['Audit trail', 'Fewer corrections'] },
           ],
         },
         {
-          type: 'list', span: 5, rows: 2, title: 'Controls required',
+          type: 'cards', span: 12, cols: 5, rows: 2, agent: true, title: 'Agent opportunities · click for detail',
           items: [
-            { title: 'Data privacy', text: 'POPIA compliance for all HR and payroll data.' },
-            { title: 'Bias', text: 'Monitor and audit any model used in hiring or promotion.' },
-            { title: 'Human oversight', text: 'People decide on employee relations and discipline.' },
-            { title: 'Change management', text: 'Communication plan for managers and employees.' },
-            { title: 'Vendor dependency', text: 'Exit and integration plan for any platform.' },
+            { icon: 'ShieldCheck', name: 'Payroll compliance', line: 'Tax and anomaly checks', status: 'proposed', detail: { rows: [['Benefit', 'Accuracy and efficiency'], ['Risk', 'Data privacy, system errors']] } },
+            { icon: 'MessageSquare', name: 'Employee query assistant', line: 'Payslips, leave, tax forms', status: 'proposed', detail: { rows: [['Benefit', '24/7 answers'], ['Risk', 'Over-reliance on automation']] } },
+            { icon: 'FileText', name: 'HR document drafting', line: 'Contracts and communications', status: 'proposed', detail: { rows: [['Benefit', 'Speed, less manual work'], ['Risk', 'Needs human review']] } },
+            { icon: 'TrendingUp', name: 'Workforce planning', line: 'Attrition and skills gaps', status: 'proposed', detail: { rows: [['Benefit', 'Better hiring, lower attrition'], ['Risk', 'Needs quality data']] } },
+            { icon: 'BarChart3', name: 'B-BBEE and ATR data', line: 'Real-time skills reporting', status: 'proposed', detail: { rows: [['Benefit', 'Reporting without manual capture']] } },
           ],
+        },
+      ],
+    },
+    {
+      id: 'next', label: 'Way forward', title: 'From clean data to intelligent HR',
+      blocks: [
+        {
+          type: 'waves', span: 8, rows: 2, title: 'Roadmap',
+          items: [
+            { when: 'Now', name: 'Stabilise', items: ['Org structure in SuccessFactors', 'EC and ECP go-live', 'Third-party deduction clean-up'] },
+            { when: 'Next', name: 'Digitise', items: ['SAP Fiori ESS', 'System integration', 'Real-time ATR and B-BBEE'] },
+            { when: 'Future', name: 'Intelligent HR', items: ['Payroll assurance agent', 'Employee query assistant', 'Workforce planning'] },
+          ],
+        },
+        {
+          type: 'asks', span: 4, rows: 2, title: 'Decisions requested from Telkom',
+          items: ['Confirm EC and ECP go-live date', 'Approve the third-party deduction clean-up', 'Sponsor the payroll assurance pilot'],
         },
       ],
     },
