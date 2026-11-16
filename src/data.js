@@ -5,8 +5,8 @@ const CONFIG = {
   key: 'hr',
   domain: 'HR & Payroll',
   period: 'H1 FY27',
-  accent: '#10b981',
-  accent2: '#06b6d4',
+  accent: '#009FE3',
+  accent2: '#FF6F4D',
   source: 'HRO EBR FY27 (Nov 2026) · HRO MBR, September 2026 review (20 Oct 2026)',
   tabs: [
     {
