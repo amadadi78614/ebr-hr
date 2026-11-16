@@ -10,6 +10,31 @@ const CONFIG = {
   source: 'HRO EBR FY27 (Nov 2026) · HRO MBR, September 2026 review (20 Oct 2026)',
   tabs: [
     {
+      id: 'since', label: 'Since last EBR', title: 'Since the May 2026 EBR',
+      blocks: [
+        {
+          type: 'hero', items: [
+            { value: '13/13', label: 'SLAs met', sub: 'Every month, Jul to Sep', tone: 'good' },
+            { value: '3', label: 'New deliveries', sub: 'Fiori ESS · Genesys Cloud · Consortium allowance', tone: 'good' },
+            { value: '1 Mar', label: 'EC and ECP go-live', sub: '2027 · UAT and parallel runs under way' },
+            { value: 'R199m', label: 'Monthly payroll', sub: 'Sep payroll processed successfully' },
+          ],
+        },
+        {
+          type: 'journey', span: 12, rows: 4, title: 'Where we were, where we are · click a row', thenLabel: 'Last EBR · May 2026', nowLabel: 'Now · Sep 2026 review',
+          items: [
+            { icon: 'Cpu', label: 'EC and ECP implementation', then: 'UAT from 12 May', now: 'Parallel runs', status: 'progress', detail: { text: 'Go-live set for 1 March 2027, with integration, Payroll Control Center and dashboards.' } },
+            { icon: 'Smartphone', label: 'SAP Fiori ESS', then: 'FY27 focus area', now: 'Delivered', status: 'delivered' },
+            { icon: 'Headphones', label: 'HR call centre', then: 'UAD application', now: 'Genesys Cloud', status: 'delivered' },
+            { icon: 'Scissors', label: 'Third-party deductions', then: 'Planned', now: 'Cancelling', status: 'progress' },
+            { icon: 'Network', label: 'Organisation structure', then: 'Requested', now: 'SuccessFactors dashboard', status: 'progress' },
+            { icon: 'BarChart3', label: 'B-BBEE', then: 'Analytics model', now: 'Training scorecard', status: 'progress' },
+            { icon: 'ShieldCheck', label: 'AI direction', then: 'General AI trends', now: 'SAP first, payroll safe', status: 'proposed' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'operations', label: 'Operations', title: 'Payroll and HR operations, September 2026',
       blocks: [
         {
