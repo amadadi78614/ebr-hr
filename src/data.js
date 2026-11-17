@@ -10,84 +10,168 @@ const CONFIG = {
   source: 'WNS Operations, Transformation and Analytics · HRO EBR FY27 · HRO MBR Sep 2026 review',
   tabs: [
     {
+      "id": "agenda",
+      "label": "Agenda",
+      "title": "HR and Payroll · Executive Business Review",
+      "blocks": [
+        {
+          "type": "agenda",
+          "span": 12,
+          "rows": 6,
+          "items": [
+            {
+              "label": "Executive summary",
+              "icon": "BadgeCheck",
+              "tab": "summary"
+            },
+            {
+              "label": "H1 highlights",
+              "icon": "Star",
+              "tab": "delivery"
+            },
+            {
+              "label": "FY27 focus areas",
+              "icon": "Target",
+              "tab": "focus"
+            },
+            {
+              "label": "Analytics",
+              "icon": "BarChart3",
+              "tab": "analytics",
+              "who": "WNS Analytics"
+            },
+            {
+              "label": "Transformation: Org Design platform",
+              "icon": "Network",
+              "tab": "ai",
+              "who": "WNS Transformation"
+            },
+            {
+              "label": "AI strategy",
+              "icon": "Sparkles",
+              "tab": "aistrategy",
+              "who": "WNS Transformation"
+            },
+            {
+              "label": "Governance and decisions",
+              "icon": "ShieldCheck",
+              "tab": "next"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "summary",
       "label": "Executive summary",
-      "title": "Smarter HR. Safer Payroll.",
+      "title": "Payroll paid accurately and on time, with zero impact from platform change",
       "blocks": [
         {
           "type": "hero",
           "items": [
             {
-              "value": "13/13",
-              "label": "SLAs met every month",
-              "sub": "Jul to Sep · 11 critical",
+              "value": "99%+",
+              "label": "Payroll accuracy",
+              "sub": "Every pay run, April to September",
               "tone": "good"
             },
             {
               "value": "R199m",
-              "label": "Paid accurately every month",
+              "label": "Paid every month",
               "sub": "6,118 employees · Telkom and Openserve"
             },
             {
-              "value": "4",
-              "label": "H1 deliveries",
-              "sub": "Including SAP Fiori ESS on mobile",
-              "tone": "good"
+              "value": "4,630",
+              "label": "Employee queries resolved",
+              "sub": "FY27 to date · Admin, Payroll, Time"
             },
             {
-              "value": "1 Mar",
-              "label": "EC and ECP go-live",
-              "sub": "2027 · the foundation for HR AI"
+              "value": "98%",
+              "label": "Resolved within target",
+              "sub": "About 5 hours on average",
+              "tone": "good"
             }
           ]
         },
         {
-          "type": "cards",
-          "span": 12,
+          "type": "chart",
+          "kind": "bar",
+          "span": 6,
           "rows": 4,
-          "cols": 4,
-          "title": "Four messages for the room · click for detail",
-          "feature": true,
-          "footLabel": "Why it matters",
+          "title": "Employee queries by mailbox, FY27 to date",
+          "note": "% resolved within target time",
+          "labels": [
+            "Admin",
+            "Payroll",
+            "Time management"
+          ],
+          "datasets": [
+            {
+              "label": "Queries",
+              "data": [
+                2373,
+                1877,
+                380
+              ],
+              "color": "accent"
+            }
+          ],
+          "footnote": "Within target: Admin 98.6% · Payroll 97.7% · Time management 97.6%"
+        },
+        {
+          "type": "cards",
+          "span": 6,
+          "rows": 4,
+          "cols": 2,
+          "list": true,
+          "title": "Core HR and payroll work, every month · click for detail",
           "items": [
             {
-              "icon": "Rocket",
-              "name": "H1 delivery",
-              "foot": "Platforms modernised while payroll ran without a missed SLA",
-              "line": "Consortium allowance, Genesys Cloud, SAP Fiori ESS",
-              "status": "delivered",
+              "icon": "Banknote",
+              "name": "Monthly payroll",
+              "line": "Telkom and Openserve, on time",
               "detail": {
-                "text": "Three platform and payroll changes live in the first half, plus ongoing ECP testing support."
+                "text": "September 2026 payroll processed successfully, as every month in H1."
               }
             },
             {
-              "icon": "Target",
-              "name": "FY27 focus",
-              "foot": "One HR and payroll platform, with controls built in",
-              "line": "EC and ECP live on 1 March 2027",
-              "status": "progress",
+              "icon": "Landmark",
+              "name": "Statutory submissions",
+              "line": "SARS EMP501, B-BBEE salaries",
               "detail": {
-                "text": "With integration, Payroll Control Center and executive dashboards."
+                "text": "Biannual SARS submissions (21 Sep to 30 Oct) tested on e-filing; Aug and Sep gross salaries submitted for B-BBEE valuation."
               }
             },
             {
-              "icon": "Sparkles",
-              "name": "AI direction",
-              "foot": "Use the AI already in SAP, on clean data, before adding platforms",
-              "line": "SAP first, payroll safe",
-              "status": "proposed",
+              "icon": "Headphones",
+              "name": "HR call centre",
+              "line": "Helpdesk for all staff",
               "detail": {
-                "text": "Payroll Control Center rules, then Joule and Explain My Pay; other platforms are additions."
+                "text": "WNS is the HR helpdesk for every Telkom and Openserve employee."
               }
             },
             {
-              "icon": "ShieldCheck",
-              "name": "Governance",
-              "foot": "No AI goes live without privacy, accuracy and access checks",
-              "line": "POPIA, data quality and accuracy gate every AI step",
-              "status": "planned",
+              "icon": "GraduationCap",
+              "name": "Bursaries and study loans",
+              "line": "2027 intake open",
               "detail": {
-                "text": "Controls and permissions audit comes first."
+                "text": "Part-time bursary applications open for 2027; Q2 bursary, debt recovery and active loan reports submitted."
+              }
+            },
+            {
+              "icon": "Building2",
+              "name": "Master data and org changes",
+              "line": "Reporting lines, grades, offices",
+              "detail": {
+                "text": "Intern grades corrected (OP1 to OP2); Openserve reporting lines, office and job function data updated."
+              }
+            },
+            {
+              "icon": "HeartPulse",
+              "name": "Pensioners and medical aid",
+              "line": "Rebates and changes",
+              "detail": {
+                "text": "Monthly medical aid rebates for pensioners and active employees."
               }
             }
           ]
@@ -95,133 +179,135 @@ const CONFIG = {
       ]
     },
     {
-      id: 'since', label: 'Since last EBR', title: 'Since the May 2026 EBR',
+      id: 'delivery', label: 'H1 highlights', title: 'H1 highlights: new platforms and policies, with payroll unaffected',
       blocks: [
         {
-          type: 'hero', items: [
-            { value: '13/13', label: 'SLAs met', sub: 'Every month, Jul to Sep', tone: 'good' },
-            { value: '3', label: 'Operations deliveries', sub: 'Fiori ESS · Genesys Cloud · Consortium allowance', tone: 'good' },
-            { value: '1 Mar', label: 'EC and ECP go-live', sub: '2027 · UAT and parallel runs under way' },
-            { value: '6', label: 'Analytics products', sub: 'Headcount · talent · B-BBEE · leave liability · more', tone: 'good' },
-          ],
-        },
-        {
-          type: 'journey', span: 12, rows: 4, title: 'Where we were, where we are · click a row', thenLabel: 'Last EBR · May 2026', nowLabel: 'Now · Sep 2026 review',
-          items: [
-            { icon: 'Cpu', label: 'EC and ECP implementation', then: 'UAT from 12 May', now: 'Parallel runs', status: 'progress', detail: { text: 'Go-live set for 1 March 2027, with integration, Payroll Control Center and dashboards.' } },
-            { icon: 'Smartphone', label: 'SAP Fiori ESS', then: 'FY27 focus area', now: 'Delivered', status: 'delivered' },
-            { icon: 'Headphones', label: 'HR call centre', then: 'UAD application', now: 'Genesys Cloud', status: 'delivered' },
-            { icon: 'Scissors', label: 'Third-party deductions', then: 'Planned', now: 'Cancelling', status: 'progress' },
-            { icon: 'Network', label: 'Org Design platform', then: 'Requested', now: 'In design · URS update', status: 'progress', detail: { text: 'WNS Transformation build replacing Nakisa, on SuccessFactors data. Requirements (URS) being updated; SuccessFactors API access requested.' } },
-            { icon: 'BarChart3', label: 'B-BBEE', then: 'Analytics model', now: 'Training scorecard', status: 'progress' },
-            { icon: 'Users', label: 'Talent and succession analytics', then: 'Proof of capability', now: 'HR Talent Dashboard', status: 'progress', detail: { text: 'Demonstrated at the last EBR as a cognitive analytics deep-dive; now built into a talent and succession dashboard (WNS Analytics).' } },
-            { icon: 'ShieldCheck', label: 'AI direction', then: 'General AI trends', now: 'SAP first, payroll safe', status: 'proposed' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'delivery', label: 'H1 delivery', title: 'Four H1 deliveries, and what they unlock',
-      blocks: [
-        {
-          type: 'cards', span: 12, cols: 4, rows: 5, feature: true, footLabel: 'What it unlocks', title: 'H1 delivery highlights · click for detail',
-          items: [
-            { icon: 'Waves', name: 'Consortium allowance', foot: 'Allowances paid through payroll, no side payments', line: 'Undersea cable allowance paid through payroll', status: 'delivered', detail: { text: 'Undersea cable allowance incorporated as an allowance and processed through payroll.', rows: [['Unlocks', 'Allowances paid through payroll, no side payments']] } },
-            { icon: 'Headphones', name: 'Genesys Cloud call centre', foot: 'Query insight for HRO: the base for an HR policy advisor', line: 'Replaced the UAD application', status: 'delivered', detail: { text: 'HR call centre management moved to Genesys Cloud for better call handling.', rows: [['Unlocks', 'Call and query insight for HRO, the base for an HR policy advisor']] } },
-            { icon: 'Smartphone', name: 'SAP Fiori ESS', foot: 'Self-service habits in place before Employee Central and Joule', line: 'Leave, approvals and payslips on mobile', status: 'delivered', detail: { text: 'Digital transformation of the ESS dashboard: leave submission, approvals and payslips on mobile or SAP on-premise.', rows: [['Unlocks', 'Self-service habits in place before Employee Central and Joule']] } },
-            { icon: 'FlaskConical', name: 'ECP testing support', foot: 'A safe 1 March 2027 go-live', line: 'Iteration testing and UAT', status: 'progress', detail: { text: 'Specialist expertise and hands-on support across iteration testing and UAT throughout FY27.', rows: [['Unlocks', 'A safe 1 March 2027 go-live']] } },
-          ],
+          "type": "cards",
+          "span": 12,
+          "cols": 4,
+          "rows": 6,
+          "feature": true,
+          "roleLabel": "WNS role",
+          "footLabel": "What it unlocks",
+          "title": "H1 highlights · click for detail",
+          "items": [
+            {
+              "icon": "Waves",
+              "name": "Consortium allowance",
+              "line": "Telkom's undersea cable allowance, now paid through payroll",
+              "status": "live",
+              "statusText": "Live",
+              "role": "Configured, tested and processed the new allowance in payroll",
+              "foot": "Policy change live with no side payments",
+              "detail": {
+                "text": "Telkom changed the policy; WNS built it into payroll and pays it every month."
+              }
+            },
+            {
+              "icon": "Headphones",
+              "name": "HR call centre on Genesys Cloud",
+              "line": "The HR helpdesk for all Telkom and Openserve staff",
+              "status": "live",
+              "statusText": "In use",
+              "role": "Runs the call centre; tested the new platform and moved across while staying open to staff",
+              "foot": "More features and better call handling than the old UAD application",
+              "detail": {
+                "text": "Telkom chose Genesys Cloud; WNS is its only call centre user and runs HR calls on it."
+              }
+            },
+            {
+              "icon": "Smartphone",
+              "name": "SAP Fiori ESS roll-out",
+              "line": "Leave, approvals and payslips on mobile",
+              "status": "live",
+              "statusText": "Rolled out",
+              "role": "Tested payslip data before roll-out; now resolves employee Fiori queries",
+              "foot": "Employees on self-service, ahead of Employee Central",
+              "detail": {
+                "text": "Telkom rolled out Fiori; WNS provided the testing and now supports employees using it."
+              }
+            },
+            {
+              "icon": "Users",
+              "name": "Specialist support on key systems",
+              "line": "For example, the ECP project",
+              "status": "progress",
+              "statusText": "Ongoing",
+              "role": "HR and payroll SMEs, hands-on across iteration testing and UAT",
+              "foot": "A safe 1 March 2027 go-live",
+              "detail": {
+                "text": "Most of H1 went into ECP: WNS brings the payroll expertise the implementation depends on."
+              }
+            }
+          ]
         },
       ],
     },
     {
       "id": "focus",
-      "owner": {
-        "name": "Mohamed Nomani",
-        "role": "WNS Transformation · part of Capgemini"
-      },
       "label": "FY27 focus",
-      "title": "Six FY27 priorities, anchored on EC and ECP",
+      "title": "Six FY27 priorities, anchored on EC and ECP going live on 1 March 2027",
       "blocks": [
-        {
-          "type": "hero",
-          "items": [
-            {
-              "value": "1 Mar 2027",
-              "label": "EC and ECP go-live",
-              "sub": "UAT and parallel runs now",
-              "tone": "good"
-            },
-            {
-              "value": "6",
-              "label": "FY27 priorities",
-              "sub": "Platform, integration, controls, data"
-            },
-            {
-              "value": "PCC",
-              "label": "Controls at go-live",
-              "sub": "Rules, alerts and process controls"
-            },
-            {
-              "value": "Org Design",
-              "label": "Main WNS build",
-              "sub": "Replacing Nakisa · in design"
-            }
-          ]
-        },
         {
           "type": "cards",
           "span": 12,
-          "rows": 4,
+          "rows": 6,
           "cols": 3,
           "title": "FY27 key focus areas · click for detail",
           "items": [
             {
               "icon": "Cpu",
               "name": "EC and Payroll implementation",
-              "line": "UAT, parallel testing, go-live",
+              "line": "User acceptance testing, parallel testing, then go-live",
               "status": "progress",
               "detail": {
                 "text": "User acceptance testing and parallel payroll runs, then go-live on 1 March 2027. WNS provides testing support."
-              }
+              },
+              "foot": "UAT worked through · parallel payroll runs now · go-live 1 March 2027"
             },
             {
               "icon": "Link",
               "name": "Seamless integration",
-              "line": "Real-time data across HR and payroll",
-              "status": "progress"
+              "line": "Upstream and downstream across HR and payroll systems",
+              "status": "progress",
+              "foot": "Real-time data flow across HR and payroll"
             },
             {
               "icon": "ShieldCheck",
               "name": "Payroll Control Center",
-              "line": "Rules, alerts and process controls",
-              "status": "planned"
+              "line": "Automated payroll processing with rules, alerts and controls",
+              "status": "planned",
+              "foot": "Goes live with EC and ECP on 1 March 2027"
             },
             {
               "icon": "Scissors",
               "name": "Third-party deductions",
-              "line": "Statutory deductions only",
+              "line": "Delimit third-party deductions",
               "status": "progress",
               "detail": {
                 "text": "Delimit third-party deductions and keep only statutory deductions (PAYE, UIF and others) in payroll."
-              }
+              },
+              "foot": "Keep only statutory deductions (PAYE, UIF) in payroll"
             },
             {
               "icon": "Users",
               "name": "Headcount reporting",
-              "line": "One view for executive reporting",
+              "line": "One consistent view of headcount",
               "status": "progress",
-              "team": "Analytics"
+              "foot": "For executive reporting · WNS Analytics"
             },
             {
               "icon": "Network",
               "name": "Organisation structure",
-              "line": "Org Design platform on SuccessFactors",
+              "line": "SuccessFactors organisational design dashboard",
               "status": "progress",
               "statusText": "In design",
-              "team": "Transformation"
+              "foot": "Org Design platform in design · WNS Transformation"
             }
-          ]
+          ],
+          "feature": true,
+          "footLabel": "Where we are",
+          "dense": true
         }
       ]
     },
