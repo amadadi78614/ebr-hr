@@ -27,7 +27,7 @@ const CONFIG = {
             { icon: 'Smartphone', label: 'SAP Fiori ESS', then: 'FY27 focus area', now: 'Delivered', status: 'delivered' },
             { icon: 'Headphones', label: 'HR call centre', then: 'UAD application', now: 'Genesys Cloud', status: 'delivered' },
             { icon: 'Scissors', label: 'Third-party deductions', then: 'Planned', now: 'Cancelling', status: 'progress' },
-            { icon: 'Network', label: 'Organisation structure', then: 'Requested', now: 'SuccessFactors dashboard', status: 'progress' },
+            { icon: 'Network', label: 'Org Design platform', then: 'Requested', now: 'URS done, build next', status: 'progress', detail: { text: 'WNS Transformation build replacing Nakisa, on SuccessFactors data. Requirements (URS) are defined; SuccessFactors API access is the next gate.' } },
             { icon: 'BarChart3', label: 'B-BBEE', then: 'Analytics model', now: 'Training scorecard', status: 'progress' },
             { icon: 'Users', label: 'Talent and succession analytics', then: 'Proof of capability', now: 'HR Talent Dashboard', status: 'progress', detail: { text: 'Demonstrated at the last EBR as a cognitive analytics deep-dive; now built into a talent and succession dashboard (WNS Analytics).' } },
             { icon: 'ShieldCheck', label: 'AI direction', then: 'General AI trends', now: 'SAP first, payroll safe', status: 'proposed' },
@@ -141,6 +141,36 @@ const CONFIG = {
       ],
     },
     {
+      id: 'orgdesign', owner: { name: "Mohamed Nomani", role: "WNS Transformation · part of Capgemini" }, label: 'Org Design platform', title: 'Org Design platform: replacing Nakisa on SuccessFactors data',
+      blocks: [
+        {
+          type: 'hero', items: [
+            { value: 'Nakisa', label: 'Being replaced', sub: 'By a WNS-built platform' },
+            { value: 'URS', label: 'Requirements defined', sub: 'Updated with HR', tone: 'good' },
+            { value: 'SF API', label: 'Access requested', sub: 'The gate to start the build', tone: 'warn' },
+            { value: '1', label: 'Source of truth', sub: 'Org structure from SuccessFactors' },
+          ],
+        },
+        {
+          type: 'track', span: 12, rows: 2, title: 'Delivery path · where we are today', at: 1,
+          steps: ['Requirements (URS)', 'SuccessFactors access', 'Build', 'Test with HR', 'Go-live', 'Org dashboards'],
+        },
+        {
+          type: 'cards', span: 8, rows: 4, cols: 2, list: true, title: 'What it gives Telkom · click for detail',
+          items: [
+            { icon: 'Network', name: 'Live org structure', line: 'Built from SuccessFactors, not spreadsheets', status: 'planned', team: 'Transformation', detail: { text: 'One current view of the organisation structure, drawn from Employee Central data.' } },
+            { icon: 'Briefcase', name: 'Position management', line: 'Positions, vacancies and reporting lines', status: 'planned', team: 'Transformation' },
+            { icon: 'Users', name: 'Headcount link', line: 'Ties to the HR headcount report', status: 'planned', team: 'Transformation + Analytics' },
+            { icon: 'Coins', name: 'Licence saving', line: 'Nakisa no longer needed', status: 'planned', team: 'Transformation', detail: { text: 'Confirm the Nakisa contract end date and saving with Telkom HR.' } },
+          ],
+        },
+        {
+          type: 'asks', span: 4, rows: 4, title: 'Decisions requested from Telkom',
+          items: ['Approve SuccessFactors API access', 'Confirm HR owner for testing and sign-off', 'Agree the Nakisa switch-off date'],
+        },
+      ],
+    },
+    {
       "id": "ai",
       "label": "Transformation and AI",
       "owner": {
@@ -153,15 +183,16 @@ const CONFIG = {
           "type": "hero",
           "items": [
             {
+              "value": "Org Design",
+              "label": "Main HR build",
+              "sub": "Replacing Nakisa · URS done",
+              "tone": "good"
+            },
+            {
               "value": "EC + ECP",
               "label": "Testing support",
               "sub": "UAT and parallel runs",
               "tone": "good"
-            },
-            {
-              "value": "URS",
-              "label": "Org Design platform",
-              "sub": "Replacing Nakisa, on SuccessFactors"
             },
             {
               "value": "1 Mar",
