@@ -195,7 +195,7 @@ const CONFIG = {
               "tone": "done",
               "items": [
                 "Org Design platform requirements (URS) defined",
-                                "B-BBEE training scorecard model with Analytics"
+                "HR automation pipeline identified: certificate of service, sales incentive upload, bursary payments, HRO OneView"
               ]
             },
             {
