@@ -235,7 +235,7 @@ const CONFIG = {
         {
           "type": "cards",
           "span": 4,
-          "rows": 5,
+          "rows": 3,
           "cols": 1,
           "list": true,
           "title": "HR transformation portfolio",
@@ -255,33 +255,32 @@ const CONFIG = {
               "icon": "ShieldCheck",
               "name": "Payroll Control Center rules",
               "status": "planned"
-            },
-            {
-              "icon": "MessageSquare",
-              "name": "HR policy advisor POC",
-              "status": "planned",
-              "statusText": "Next 90 days"
-            },
-            {
-              "icon": "FileBadge",
-              "name": "Certificate of service",
-              "status": "planned"
             }
+          ]
+        },
+        {
+          "type": "asks",
+          "span": 4,
+          "rows": 2,
+          "title": "To move AI from learning to value",
+          "items": [
+            "Enable Microsoft enterprise AI access for Shared Services",
+            "Fund contained AI only where a business case proves it"
           ]
         },
         {
           "type": "track",
           "span": 12,
           "rows": 2,
-          "title": "Org Design delivery path · where we are today",
-          "at": 0,
+          "title": "How we take AI to value · HR policy advisor is at step 2",
+          "at": 1,
           "steps": [
-            "Requirements (URS)",
-            "SuccessFactors access",
-            "Build",
-            "Test with HR",
-            "Go-live",
-            "Org dashboards"
+            "Business problem",
+            "Use case",
+            "Prove value (POC)",
+            "Select architecture",
+            "Embed in workflow",
+            "Measure outcome"
           ]
         }
       ]
@@ -308,7 +307,7 @@ const CONFIG = {
         },
         {
           type: 'asks', span: 4, rows: 1, title: 'Decisions requested from Telkom',
-          items: ['Enable Microsoft enterprise AI access for the Shared Services team', 'Confirm readiness gates for 1 March 2027', 'Approve SuccessFactors API access for the Org Design platform', 'Fund contained AI only where a business case proves it'],
+          items: ['Confirm readiness gates for 1 March 2027', 'Approve SuccessFactors API access for the Org Design platform', 'Name the HR owner for Org Design sign-off'],
         },
       ],
     },
