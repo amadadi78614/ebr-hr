@@ -27,7 +27,7 @@ const CONFIG = {
             { icon: 'Smartphone', label: 'SAP Fiori ESS', then: 'FY27 focus area', now: 'Delivered', status: 'delivered' },
             { icon: 'Headphones', label: 'HR call centre', then: 'UAD application', now: 'Genesys Cloud', status: 'delivered' },
             { icon: 'Scissors', label: 'Third-party deductions', then: 'Planned', now: 'Cancelling', status: 'progress' },
-            { icon: 'Network', label: 'Org Design platform', then: 'Requested', now: 'URS done, build next', status: 'progress', detail: { text: 'WNS Transformation build replacing Nakisa, on SuccessFactors data. Requirements (URS) are defined; SuccessFactors API access is the next gate.' } },
+            { icon: 'Network', label: 'Org Design platform', then: 'Requested', now: 'In design · URS update', status: 'progress', detail: { text: 'WNS Transformation build replacing Nakisa, on SuccessFactors data. Requirements (URS) being updated; SuccessFactors API access requested.' } },
             { icon: 'BarChart3', label: 'B-BBEE', then: 'Analytics model', now: 'Training scorecard', status: 'progress' },
             { icon: 'Users', label: 'Talent and succession analytics', then: 'Proof of capability', now: 'HR Talent Dashboard', status: 'progress', detail: { text: 'Demonstrated at the last EBR as a cognitive analytics deep-dive; now built into a talent and succession dashboard (WNS Analytics).' } },
             { icon: 'ShieldCheck', label: 'AI direction', then: 'General AI trends', now: 'SAP first, payroll safe', status: 'proposed' },
@@ -131,7 +131,7 @@ const CONFIG = {
         {
           type: 'cards', span: 12, cols: 5, rows: 2, title: 'WNS Transformation portfolio · click for detail',
           items: [
-            { icon: 'Network', name: 'Org Design platform', line: 'WNS build replacing Nakisa', status: 'progress', team: 'Transformation', detail: { rows: [['What', 'Organisation design platform on SuccessFactors data, replacing Nakisa'], ['Now', 'URS updated; SuccessFactors API access being finalised'], ['Unlocks', 'Org structure dashboard and position management']] } },
+            { icon: 'Network', name: 'Org Design platform', line: 'In design · replacing Nakisa', status: 'progress', team: 'Transformation', detail: { rows: [['What', 'Organisation design platform on SuccessFactors data, replacing Nakisa'], ['Now', 'URS being updated; SuccessFactors API access requested'], ['Unlocks', 'Org structure dashboard and position management']] } },
             { icon: 'Cpu', name: 'EC and ECP go-live', line: 'Testing support to 1 Mar 2027', status: 'progress', team: 'Operations + Transformation' },
             { icon: 'ShieldCheck', name: 'Payroll Control Center', line: 'Rules and alerts at go-live', status: 'planned', team: 'Transformation' },
             { icon: 'BarChart3', name: 'B-BBEE training scorecard', line: 'Work in progress', status: 'progress', team: 'Transformation + Analytics' },
@@ -141,18 +141,18 @@ const CONFIG = {
       ],
     },
     {
-      id: 'orgdesign', owner: { name: "Mohamed Nomani", role: "WNS Transformation · part of Capgemini" }, label: 'Org Design platform', title: 'Org Design platform: replacing Nakisa on SuccessFactors data',
+      id: 'orgdesign', owner: { name: "Mohamed Nomani", role: "WNS Transformation · part of Capgemini" }, label: 'Org Design platform', title: 'Org Design platform: in design, replacing Nakisa',
       blocks: [
         {
           type: 'hero', items: [
             { value: 'Nakisa', label: 'Being replaced', sub: 'By a WNS-built platform' },
-            { value: 'URS', label: 'Requirements defined', sub: 'Updated with HR', tone: 'good' },
+            { value: 'URS', label: 'Requirements', sub: 'Being updated with HR' },
             { value: 'SF API', label: 'Access requested', sub: 'The gate to start the build', tone: 'warn' },
             { value: '1', label: 'Source of truth', sub: 'Org structure from SuccessFactors' },
           ],
         },
         {
-          type: 'track', span: 12, rows: 2, title: 'Delivery path · where we are today', at: 1,
+          type: 'track', span: 12, rows: 2, title: 'Delivery path · where we are today', at: 0,
           steps: ['Requirements (URS)', 'SuccessFactors access', 'Build', 'Test with HR', 'Go-live', 'Org dashboards'],
         },
         {
@@ -185,8 +185,7 @@ const CONFIG = {
             {
               "value": "Org Design",
               "label": "Main HR build",
-              "sub": "Replacing Nakisa · URS done",
-              "tone": "good"
+              "sub": "In design · replacing Nakisa"
             },
             {
               "value": "EC + ECP",
@@ -221,11 +220,10 @@ const CONFIG = {
           "title": "WNS Transformation portfolio · done, under way, next 90 days",
           "items": [
             {
-              "when": "Done · live at Telkom",
-              "name": "Delivered",
+              "when": "Done so far",
+              "name": "Groundwork",
               "tone": "done",
               "items": [
-                "Org Design platform requirements (URS) defined",
                 "HR automation pipeline identified: certificate of service, sales incentive upload, bursary payments, HRO OneView"
               ]
             },
@@ -236,7 +234,7 @@ const CONFIG = {
               "items": [
                 "EC and ECP testing support to go-live",
                 "B-BBEE training scorecard, with Analytics",
-                "Org Design platform build on SuccessFactors data",
+                "Org Design platform: URS update and SuccessFactors API access",
                 "Payroll Control Center rules"
               ]
             },
