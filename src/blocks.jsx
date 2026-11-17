@@ -216,9 +216,10 @@ function Cards({ b, open }) {
         {b.items.map((it, n) => (
           <button key={it.name} className={'icard' + (b.agent ? ' agent' : '')} style={{ animationDelay: `${n * 60}ms` }}
             onClick={it.detail ? () => open({ title: it.name, tag: b.title, ...it.detail }) : undefined}>
-            <div className="icard-top"><span className="ico"><Icon name={it.icon} /></span>{it.status && <Pill s={it.status} />}</div>
+            <div className="icard-top"><span className="ico"><Icon name={it.icon} /></span>{it.status && <Pill s={it.status} text={it.statusText} />}</div>
             <b>{it.name}</b>
             {it.line && <small>{it.line}</small>}
+            {it.team && <span className="team">{it.team}</span>}
             {it.metric && <em>{it.metric}</em>}
           </button>
         ))}

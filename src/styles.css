@@ -242,3 +242,6 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 .ring-c b{color:#231F20}
 .node>b{color:#231F20}
 .tile:hover{box-shadow:0 6px 16px rgba(16,24,40,.08)}
+
+.team{margin-top:auto;align-self:flex-start;font-size:9.5px;font-weight:600;letter-spacing:.4px;color:#0070AD;background:#E8F4FB;border-radius:6px;padding:2px 7px}
+.icard .team+em,.icard em{margin-top:4px}

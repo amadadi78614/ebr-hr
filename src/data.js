@@ -7,7 +7,7 @@ const CONFIG = {
   period: 'H1 FY27',
   accent: '#009FE3',
   accent2: '#FF6F4D',
-  source: 'HRO EBR FY27 (Nov 2026) · HRO MBR, September 2026 review (20 Oct 2026)',
+  source: 'WNS Operations, Transformation and Analytics · HRO EBR FY27 · HRO MBR Sep 2026 review',
   tabs: [
     {
       id: 'since', label: 'Since last EBR', title: 'Since the May 2026 EBR',
@@ -15,9 +15,9 @@ const CONFIG = {
         {
           type: 'hero', items: [
             { value: '13/13', label: 'SLAs met', sub: 'Every month, Jul to Sep', tone: 'good' },
-            { value: '3', label: 'New deliveries', sub: 'Fiori ESS · Genesys Cloud · Consortium allowance', tone: 'good' },
+            { value: '3', label: 'Operations deliveries', sub: 'Fiori ESS · Genesys Cloud · Consortium allowance', tone: 'good' },
             { value: '1 Mar', label: 'EC and ECP go-live', sub: '2027 · UAT and parallel runs under way' },
-            { value: 'R199m', label: 'Monthly payroll', sub: 'Sep payroll processed successfully' },
+            { value: '6', label: 'Analytics products', sub: 'Headcount · talent · B-BBEE · leave liability · more', tone: 'good' },
           ],
         },
         {
@@ -29,6 +29,7 @@ const CONFIG = {
             { icon: 'Scissors', label: 'Third-party deductions', then: 'Planned', now: 'Cancelling', status: 'progress' },
             { icon: 'Network', label: 'Organisation structure', then: 'Requested', now: 'SuccessFactors dashboard', status: 'progress' },
             { icon: 'BarChart3', label: 'B-BBEE', then: 'Analytics model', now: 'Training scorecard', status: 'progress' },
+            { icon: 'Users', label: 'Talent and succession analytics', then: 'Proof of capability', now: 'HR Talent Dashboard', status: 'progress', detail: { text: 'Demonstrated at the last EBR as a cognitive analytics deep-dive; now built into a talent and succession dashboard (WNS Analytics).' } },
             { icon: 'ShieldCheck', label: 'AI direction', then: 'General AI trends', now: 'SAP first, payroll safe', status: 'proposed' },
           ],
         },
@@ -104,40 +105,71 @@ const CONFIG = {
           ],
         },
         {
-          type: 'cards', span: 12, cols: 5, rows: 2, title: 'Transformation roadmap · status',
+          type: 'cards', span: 12, cols: 5, rows: 2, title: 'WNS Transformation portfolio · click for detail',
           items: [
-            { icon: 'Cpu', name: 'EC Payroll implementation', line: 'Go-live Mar 2027', status: 'progress' },
-            { icon: 'Network', name: 'Organisation structure', line: 'SuccessFactors dashboard', status: 'progress' },
-            { icon: 'Users', name: 'Headcount analytics', line: 'HRO Analytics COE', status: 'progress' },
-            { icon: 'BarChart3', name: 'B-BBEE training scorecard', line: 'Work in progress', status: 'progress' },
-            { icon: 'FileBadge', name: 'Certificate of service', line: 'Automation in SuccessFactors', status: 'planned', detail: { text: 'Parked for later: sales incentive upload to SAP, full-time bursary payments, HRO OneView control panel.' } },
+            { icon: 'Network', name: 'Org Design platform', line: 'WNS build replacing Nakisa', status: 'progress', team: 'Transformation', detail: { rows: [['What', 'Organisation design platform on SuccessFactors data, replacing Nakisa'], ['Now', 'URS updated; SuccessFactors API access being finalised'], ['Unlocks', 'Org structure dashboard and position management']] } },
+            { icon: 'Cpu', name: 'EC and ECP go-live', line: 'Testing support to 1 Mar 2027', status: 'progress', team: 'Operations + Transformation' },
+            { icon: 'ShieldCheck', name: 'Payroll Control Center', line: 'Rules and alerts at go-live', status: 'planned', team: 'Transformation' },
+            { icon: 'BarChart3', name: 'B-BBEE training scorecard', line: 'Work in progress', status: 'progress', team: 'Transformation + Analytics' },
+            { icon: 'FileBadge', name: 'Certificate of service', line: 'Automation in SuccessFactors', status: 'planned', team: 'Transformation', detail: { text: 'Parked for later: sales incentive upload to SAP, full-time bursary payments, HRO OneView control panel.' } },
           ],
         },
       ],
     },
     {
-      id: 'ai', label: 'AI opportunities', title: 'Smarter HR, safer payroll: SAP first',
+      id: 'analytics', label: 'Analytics', title: 'A more reliable workforce decision layer',
       blocks: [
         {
-          type: 'hero', items: [
-            { value: '79%', label: 'SA white-collar staff use AI', sub: 'Global: 74%' },
-            { value: '86%', label: 'HR and payroll leaders', sub: 'Expect AI to transform the function in 5 years' },
-            { value: '63%', label: 'Employees feel trained', sub: 'vs 94% of leaders who think they are', tone: 'warn' },
-            { value: '41%', label: 'HR teams prioritise work redesign', sub: 'While 71% of C-suites rank AI ROI highly', tone: 'warn' },
+          type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · WNS Analytics · click for detail',
+          items: [
+            { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Tracks training spend and participation against Skills Development targets to identify gaps early. Controls compliance and removes surprises.' } },
+            { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
+            { icon: 'UserSearch', name: 'HR Talent Dashboard', line: 'Demographics and succession', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Identifies workforce risks, critical-role coverage and successor readiness.' } },
+            { icon: 'HeartPulse', name: 'Pensioners Medical Aid', line: 'Status and history in SharePoint', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Improves query resolution, auditability and compliance.' } },
+            { icon: 'CalendarClock', name: 'Leave Liability (LPA)', line: 'Accrued leave and value', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Supports month-end provisioning and proactive leave management.' } },
+            { icon: 'Inbox', name: 'HRO Mailbox Monitoring', line: 'Volumes, response times, backlog', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Exposes backlogs and improves employee service accountability.' } },
           ],
         },
         {
-          type: 'stairs', span: 5, rows: 3, title: 'Sequence: automation, then assistance, then agents', current: 1, target: 3, targetLabel: 'Explore',
-          levels: ['Clean EC data', 'PCC rules', 'Joule', 'SAP agents'],
-          footnote: 'Joule and agents inherit the quality of the data and rules beneath them.',
+          type: 'rings', span: 4, rows: 4, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
+          items: [
+            { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
+            { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
+            { pct: 5, value: '5%', label: 'Cognitive', sub: 'Controlled execution', color: 'accent2' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'ai', label: 'AI opportunities', title: 'One WNS AI agenda for HR and Payroll',
+      blocks: [
+        {
+          type: 'hero', items: [
+            { value: '90%', label: 'Organisations experimenting with AI', sub: 'McKinsey, 2026' },
+            { value: '7%', label: 'Scaling AI across the enterprise', sub: 'McKinsey, 2026', tone: 'warn' },
+            { value: '63%', label: 'SA employees feel AI-trained', sub: 'vs 94% of leaders who think they are', tone: 'warn' },
+            { value: '1 Mar', label: 'EC and ECP go-live', sub: 'The data foundation for HR AI' },
+          ],
         },
         {
-          type: 'cards', span: 7, rows: 3, cols: 2, agent: true, title: 'AI on SAP · click for detail',
+          type: 'cards', span: 12, rows: 2, cols: 3, agent: true, title: 'Use cases by horizon · click for detail',
           items: [
-            { icon: 'ShieldCheck', name: 'Payroll Control Center', line: 'Rules, alerts, controlled remediation', status: 'planned', detail: { rows: [['Type', 'Rules-based automation'], ['Role', 'Detects validation exceptions; not generative AI on its own']] } },
-            { icon: 'MessageSquare', name: 'Joule', line: 'Self-service in natural language', status: 'proposed', detail: { rows: [['Type', 'Generative assistance'], ['Scope', 'Eligible EC self-service and pay-statement access, within SAP permissions']] } },
-            { icon: 'Receipt', name: 'Explain My Pay', line: 'Employees understand their payslip', status: 'proposed', detail: { text: 'Only accurate if the underlying payroll data is accurate.' } },
-            { icon: 'Bot', name: 'SAP HR agents', line: 'HR Operations, HR Service, Payroll', status: 'proposed', detail: { rows: [['Type', 'Agentic AI (emerging)'], ['Note', 'Restricted availability or planned releases; confirm with SAP']] } },
+            { icon: 'Brain', name: 'Workforce intelligence', line: 'Decision intelligence: talent planning and succession', status: 'proposed', team: 'Analytics', detail: { rows: [['Builds on', 'HR Talent Dashboard and headcount data'], ['Value', 'Earlier view of workforce risk and critical-role coverage']] } },
+            { icon: 'BookOpen', name: 'HR policy advisor', line: 'Process intelligence: policy answers in workflow', status: 'proposed', team: 'Analytics + Transformation', detail: { rows: [['Builds on', 'HR policies, HRO mailbox query patterns'], ['Value', 'Fewer repeat queries, consistent answers']] } },
+            { icon: 'Workflow', name: 'Employee self-service and workflow', line: 'Autonomous operations, governed', status: 'proposed', team: 'Transformation', detail: { rows: [['Builds on', 'Fiori ESS, Org Design platform, EC'], ['Value', 'Requests completed end to end with approvals']] } },
+          ],
+        },
+        {
+          type: 'stairs', span: 6, rows: 2, title: 'SAP first, payroll safe', current: 1, target: 3, targetLabel: 'Explore',
+          levels: ['Clean EC data', 'PCC rules', 'Joule', 'SAP agents'],
+        },
+        {
+          type: 'cards', span: 6, rows: 2, cols: 4, title: 'AI on SAP · click for detail',
+          items: [
+            { icon: 'ShieldCheck', name: 'Payroll Control Center', line: 'Rules-based controls', status: 'planned', detail: { text: 'Detects validation exceptions with controlled remediation. Not generative AI on its own.' } },
+            { icon: 'MessageSquare', name: 'Joule', line: 'Self-service in natural language', status: 'proposed', detail: { text: 'Eligible EC self-service and pay-statement access within SAP permissions.' } },
+            { icon: 'Receipt', name: 'Explain My Pay', line: 'Payslip explained', status: 'proposed', detail: { text: 'Only accurate if the underlying payroll data is accurate.' } },
+            { icon: 'Bot', name: 'SAP HR agents', line: 'Confirm availability', status: 'proposed', detail: { text: 'HR Operations, HR Service and Payroll assistants: restricted availability or planned releases.' } },
           ],
         },
       ],
@@ -148,9 +180,9 @@ const CONFIG = {
         {
           type: 'waves', span: 8, rows: 2, title: 'Roadmap',
           items: [
-            { when: 'Now to Feb 2027', name: 'Prepare', items: ['UAT and parallel payroll runs', 'Cancel third-party deductions', 'Org structure and headcount dashboards'] },
+            { when: 'Now to Feb 2027', name: 'Prepare', items: ['UAT and parallel payroll runs', 'Cancel third-party deductions', 'Org Design platform and headcount report', 'Talent dashboard in use'] },
             { when: '1 March 2027', name: 'Go live', items: ['Employee Central and Payroll live', 'Integration across HR and payroll', 'Payroll Control Center'] },
-            { when: 'After go-live', name: 'AI on SAP', items: ['Permissions and POPIA audit', 'Joule and Explain My Pay', 'Assess SAP HR agents'] },
+            { when: 'After go-live', name: 'Intelligent HR', items: ['Permissions and POPIA audit', 'Joule and Explain My Pay', 'Workforce intelligence and HR policy advisor', 'Business problem → POC → embed → measure'] },
           ],
         },
         {
@@ -164,7 +196,7 @@ const CONFIG = {
         },
         {
           type: 'asks', span: 4, rows: 1, title: 'Decisions requested from Telkom',
-          items: ['Confirm readiness gates for 1 March 2027', 'Approve the permissions and POPIA audit', 'Budget training alongside AI licences'],
+          items: ['Enable Microsoft enterprise AI access for the Shared Services team', 'Confirm readiness gates for 1 March 2027', 'Approve SuccessFactors API access for the Org Design platform', 'Fund contained AI only where a business case proves it'],
         },
       ],
     },
