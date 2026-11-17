@@ -144,29 +144,31 @@ const CONFIG = {
       id: 'orgdesign', owner: { name: "Mohamed Nomani", role: "WNS Transformation · part of Capgemini" }, label: 'Org Design platform', title: 'Org Design platform: in design, replacing Nakisa',
       blocks: [
         {
-          type: 'hero', items: [
-            { value: 'Nakisa', label: 'Being replaced', sub: 'By a WNS-built platform' },
-            { value: 'URS', label: 'Requirements', sub: 'Being updated with HR' },
-            { value: 'SF API', label: 'Access requested', sub: 'The gate to start the build', tone: 'warn' },
-            { value: '1', label: 'Source of truth', sub: 'Org structure from SuccessFactors' },
+          type: 'lead', span: 12, rows: 2, icon: 'Network',
+          text: 'A WNS-built platform that reads Telkom\'s organisation straight from SuccessFactors, so HR can see, plan and govern the structure in one place, without Nakisa.',
+          chips: ['Replaces Nakisa', 'Runs on SuccessFactors data', 'Built by WNS Transformation'],
+        },
+        {
+          type: 'cards', span: 6, rows: 5, cols: 1, list: true, title: 'What it does · click for detail',
+          items: [
+            { icon: 'Network', name: 'Live org chart', line: 'Structure, reporting lines and units from Employee Central', detail: { text: 'Always current: the chart is drawn from SuccessFactors data, not maintained by hand.' } },
+            { icon: 'Briefcase', name: 'Position management', line: 'Positions, vacancies and who reports to whom', detail: { text: 'See filled and vacant positions by unit, grade and reporting line.' } },
+            { icon: 'GitBranch', name: 'Design changes before approval', line: 'Model a new structure and see its impact', detail: { text: 'Draft a restructure, compare it with today, and route it for approval before anything changes in SuccessFactors. Scope being confirmed in the URS.' } },
+            { icon: 'Users', name: 'Headcount view', line: 'Links to the HR headcount report', detail: { text: 'Headcount by unit, grade and employment type alongside the structure.' } },
+          ],
+        },
+        {
+          type: 'cards', span: 6, rows: 5, cols: 1, list: true, title: 'Benefits for Telkom · click for detail',
+          items: [
+            { icon: 'Coins', name: 'Licence cost removed', line: 'Nakisa no longer needed', status: 'planned', detail: { text: 'Saving and switch-off date to be confirmed with Telkom HR.' } },
+            { icon: 'ShieldCheck', name: 'One version of the truth', line: 'No offline spreadsheets', status: 'planned', detail: { text: 'Structure, positions and headcount all come from SuccessFactors.' } },
+            { icon: 'Timer', name: 'Faster restructures', line: 'Design, compare, approve', status: 'planned', detail: { text: 'Org changes planned and agreed in one tool instead of email and manual charts.' } },
+            { icon: 'FileSearch', name: 'Governed and auditable', line: 'Changes traceable', status: 'planned', detail: { text: 'Who changed what, when and with whose approval.' } },
           ],
         },
         {
           type: 'track', span: 12, rows: 2, title: 'Delivery path · where we are today', at: 0,
           steps: ['Requirements (URS)', 'SuccessFactors access', 'Build', 'Test with HR', 'Go-live', 'Org dashboards'],
-        },
-        {
-          type: 'cards', span: 8, rows: 4, cols: 2, list: true, title: 'What it gives Telkom · click for detail',
-          items: [
-            { icon: 'Network', name: 'Live org structure', line: 'Built from SuccessFactors, not spreadsheets', status: 'planned', team: 'Transformation', detail: { text: 'One current view of the organisation structure, drawn from Employee Central data.' } },
-            { icon: 'Briefcase', name: 'Position management', line: 'Positions, vacancies and reporting lines', status: 'planned', team: 'Transformation' },
-            { icon: 'Users', name: 'Headcount link', line: 'Ties to the HR headcount report', status: 'planned', team: 'Transformation + Analytics' },
-            { icon: 'Coins', name: 'Licence saving', line: 'Nakisa no longer needed', status: 'planned', team: 'Transformation', detail: { text: 'Confirm the Nakisa contract end date and saving with Telkom HR.' } },
-          ],
-        },
-        {
-          type: 'asks', span: 4, rows: 4, title: 'Decisions requested from Telkom',
-          items: ['Approve SuccessFactors API access', 'Confirm HR owner for testing and sign-off', 'Agree the Nakisa switch-off date'],
         },
       ],
     },
