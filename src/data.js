@@ -141,38 +141,86 @@ const CONFIG = {
       ],
     },
     {
-      id: 'ai', label: 'AI opportunities', title: 'One WNS AI agenda for HR and Payroll',
-      blocks: [
+      "id": "ai",
+      "label": "AI journey",
+      "title": "WNS, part of Capgemini, is taking Telkom on the AI journey",
+      "blocks": [
         {
-          type: 'hero', items: [
-            { value: '90%', label: 'Organisations experimenting with AI', sub: 'McKinsey, 2026' },
-            { value: '7%', label: 'Scaling AI across the enterprise', sub: 'McKinsey, 2026', tone: 'warn' },
-            { value: '63%', label: 'SA employees feel AI-trained', sub: 'vs 94% of leaders who think they are', tone: 'warn' },
-            { value: '1 Mar', label: 'EC and ECP go-live', sub: 'The data foundation for HR AI' },
-          ],
+          "type": "hero",
+          "items": [
+            {
+              "value": "6",
+              "label": "Analytics products live",
+              "sub": "Headcount · talent · B-BBEE · leave liability",
+              "tone": "good"
+            },
+            {
+              "value": "Built",
+              "label": "Talent and succession insight",
+              "sub": "HR Talent Dashboard",
+              "tone": "good"
+            },
+            {
+              "value": "1 Mar",
+              "label": "EC and ECP go-live",
+              "sub": "Clean data is the base for HR AI"
+            },
+            {
+              "value": "POC",
+              "label": "First HR AI use case",
+              "sub": "HR policy advisor on HRO queries"
+            }
+          ]
         },
         {
-          type: 'cards', span: 12, rows: 2, cols: 3, agent: true, title: 'Use cases by horizon · click for detail',
-          items: [
-            { icon: 'Brain', name: 'Workforce intelligence', line: 'Decision intelligence: talent planning and succession', status: 'proposed', team: 'Analytics', detail: { rows: [['Builds on', 'HR Talent Dashboard and headcount data'], ['Value', 'Earlier view of workforce risk and critical-role coverage']] } },
-            { icon: 'BookOpen', name: 'HR policy advisor', line: 'Process intelligence: policy answers in workflow', status: 'proposed', team: 'Analytics + Transformation', detail: { rows: [['Builds on', 'HR policies, HRO mailbox query patterns'], ['Value', 'Fewer repeat queries, consistent answers']] } },
-            { icon: 'Workflow', name: 'Employee self-service and workflow', line: 'Autonomous operations, governed', status: 'proposed', team: 'Transformation', detail: { rows: [['Builds on', 'Fiori ESS, Org Design platform, EC'], ['Value', 'Requests completed end to end with approvals']] } },
-          ],
+          "type": "track",
+          "span": 12,
+          "rows": 2,
+          "title": "How we take AI from idea to value · where the HR policy advisor is today",
+          "at": 1,
+          "flag": "the HR policy advisor"
         },
         {
-          type: 'stairs', span: 6, rows: 2, title: 'SAP first, payroll safe', current: 1, target: 3, targetLabel: 'Explore',
-          levels: ['Clean EC data', 'PCC rules', 'Joule', 'SAP agents'],
-        },
-        {
-          type: 'cards', span: 6, rows: 2, cols: 4, title: 'AI on SAP · click for detail',
-          items: [
-            { icon: 'ShieldCheck', name: 'Payroll Control Center', line: 'Rules-based controls', status: 'planned', detail: { text: 'Detects validation exceptions with controlled remediation. Not generative AI on its own.' } },
-            { icon: 'MessageSquare', name: 'Joule', line: 'Self-service in natural language', status: 'proposed', detail: { text: 'Eligible EC self-service and pay-statement access within SAP permissions.' } },
-            { icon: 'Receipt', name: 'Explain My Pay', line: 'Payslip explained', status: 'proposed', detail: { text: 'Only accurate if the underlying payroll data is accurate.' } },
-            { icon: 'Bot', name: 'SAP HR agents', line: 'Confirm availability', status: 'proposed', detail: { text: 'HR Operations, HR Service and Payroll assistants: restricted availability or planned releases.' } },
-          ],
-        },
-      ],
+          "type": "waves",
+          "big": true,
+          "span": 12,
+          "rows": 4,
+          "title": "Done, under way, next 90 days",
+          "items": [
+            {
+              "when": "Done · proven with Telkom",
+              "name": "Built and in use",
+              "tone": "done",
+              "items": [
+                "HR Talent Dashboard: demographics and succession",
+                "Headcount report automated",
+                "B-BBEE skills and leave liability tracking",
+                "HRO mailbox monitoring"
+              ]
+            },
+            {
+              "when": "Under way",
+              "name": "Being delivered now",
+              "tone": "doing",
+              "items": [
+                "EC and ECP go-live on 1 March 2027",
+                "Payroll Control Center rules",
+                "Org Design platform on SuccessFactors data"
+              ]
+            },
+            {
+              "when": "Next 90 days",
+              "name": "What we will prove next",
+              "tone": "next",
+              "items": [
+                "HR policy advisor POC on real HRO queries",
+                "Permissions and POPIA audit first",
+                "Joule and Explain My Pay, against licences"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       id: 'next', label: 'Way forward', title: 'Controls and permissions first, then AI',
