@@ -141,69 +141,131 @@ const CONFIG = {
       ],
     },
     {
-      id: 'orgdesign', owner: { name: "Mohamed Nomani", role: "WNS Transformation · part of Capgemini" }, label: 'Org Design platform', title: 'Org Design platform: in design, replacing Nakisa',
-      blocks: [
-        {
-          type: 'lead', span: 12, rows: 2, icon: 'Network',
-          text: 'A WNS-built platform that reads Telkom\'s organisation straight from SuccessFactors, so HR can see, plan and govern the structure in one place, without Nakisa.',
-          chips: ['Replaces Nakisa', 'Runs on SuccessFactors data', 'Built by WNS Transformation'],
-        },
-        {
-          type: 'cards', span: 6, rows: 5, cols: 1, list: true, title: 'What it does · click for detail',
-          items: [
-            { icon: 'Network', name: 'Live org chart', line: 'Structure, reporting lines and units from Employee Central', detail: { text: 'Always current: the chart is drawn from SuccessFactors data, not maintained by hand.' } },
-            { icon: 'Briefcase', name: 'Position management', line: 'Positions, vacancies and who reports to whom', detail: { text: 'See filled and vacant positions by unit, grade and reporting line.' } },
-            { icon: 'GitBranch', name: 'Design changes before approval', line: 'Model a new structure and see its impact', detail: { text: 'Draft a restructure, compare it with today, and route it for approval before anything changes in SuccessFactors. Scope being confirmed in the URS.' } },
-            { icon: 'Users', name: 'Headcount view', line: 'Links to the HR headcount report', detail: { text: 'Headcount by unit, grade and employment type alongside the structure.' } },
-          ],
-        },
-        {
-          type: 'cards', span: 6, rows: 5, cols: 1, list: true, title: 'Benefits for Telkom · click for detail',
-          items: [
-            { icon: 'Coins', name: 'Licence cost removed', line: 'Nakisa no longer needed', status: 'planned', detail: { text: 'Saving and switch-off date to be confirmed with Telkom HR.' } },
-            { icon: 'ShieldCheck', name: 'One version of the truth', line: 'No offline spreadsheets', status: 'planned', detail: { text: 'Structure, positions and headcount all come from SuccessFactors.' } },
-            { icon: 'Timer', name: 'Faster restructures', line: 'Design, compare, approve', status: 'planned', detail: { text: 'Org changes planned and agreed in one tool instead of email and manual charts.' } },
-            { icon: 'FileSearch', name: 'Governed and auditable', line: 'Changes traceable', status: 'planned', detail: { text: 'Who changed what, when and with whose approval.' } },
-          ],
-        },
-        {
-          type: 'track', span: 12, rows: 2, title: 'Delivery path · where we are today', at: 0,
-          steps: ['Requirements (URS)', 'SuccessFactors access', 'Build', 'Test with HR', 'Go-live', 'Org dashboards'],
-        },
-      ],
-    },
-    {
       "id": "ai",
       "label": "Transformation and AI",
       "owner": {
         "name": "Mohamed Nomani",
         "role": "WNS Transformation · part of Capgemini"
       },
-      "title": "From manual HR admin to governed HR AI",
+      "title": "Org Design platform leads HR transformation",
       "blocks": [
         {
-          "type": "hero",
+          "type": "arch",
+          "span": 8,
+          "rows": 5,
+          "title": "Org Design platform · how it works · click an outcome",
+          "sources": [
+            {
+              "icon": "Database",
+              "name": "SuccessFactors EC",
+              "sub": "Structure, positions, people"
+            },
+            {
+              "icon": "Network",
+              "name": "Nakisa",
+              "sub": "Current org tool",
+              "retire": true
+            }
+          ],
+          "core": {
+            "kicker": "WNS Transformation",
+            "name": "Org Design platform",
+            "status": "progress",
+            "statusText": "In design · URS"
+          },
+          "outputs": [
+            {
+              "icon": "Network",
+              "name": "Live org chart",
+              "metric": "Always current",
+              "detail": {
+                "text": "Drawn from Employee Central, not maintained by hand.",
+                "rows": [
+                  [
+                    "Benefit",
+                    "One version of the truth, no offline charts"
+                  ]
+                ]
+              }
+            },
+            {
+              "icon": "Briefcase",
+              "name": "Position management",
+              "metric": "Vacancies visible",
+              "detail": {
+                "text": "Filled and vacant positions by unit, grade and reporting line.",
+                "rows": [
+                  [
+                    "Benefit",
+                    "Faster hiring and budget decisions"
+                  ]
+                ]
+              }
+            },
+            {
+              "icon": "GitBranch",
+              "name": "Design changes",
+              "metric": "Model, then approve",
+              "detail": {
+                "text": "Draft a restructure, compare it with today and route it for approval. Scope being confirmed in the URS.",
+                "rows": [
+                  [
+                    "Benefit",
+                    "Faster, governed restructures"
+                  ]
+                ]
+              }
+            },
+            {
+              "icon": "Users",
+              "name": "Headcount view",
+              "metric": "One number",
+              "detail": {
+                "text": "Headcount by unit, grade and employment type alongside the structure.",
+                "rows": [
+                  [
+                    "Benefit",
+                    "Links to the HR headcount report"
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "span": 4,
+          "rows": 5,
+          "cols": 1,
+          "list": true,
+          "title": "HR transformation portfolio",
           "items": [
             {
-              "value": "Org Design",
-              "label": "Main HR build",
-              "sub": "In design · replacing Nakisa"
+              "icon": "Network",
+              "name": "Org Design platform",
+              "status": "progress",
+              "statusText": "In design"
             },
             {
-              "value": "EC + ECP",
-              "label": "Testing support",
-              "sub": "UAT and parallel runs",
-              "tone": "good"
+              "icon": "Cpu",
+              "name": "EC and ECP testing support",
+              "status": "progress"
             },
             {
-              "value": "1 Mar",
-              "label": "Go-live",
-              "sub": "Clean data is the base for HR AI"
+              "icon": "ShieldCheck",
+              "name": "Payroll Control Center rules",
+              "status": "planned"
             },
             {
-              "value": "POC",
-              "label": "First HR AI use case",
-              "sub": "HR policy advisor on HRO queries"
+              "icon": "MessageSquare",
+              "name": "HR policy advisor POC",
+              "status": "planned",
+              "statusText": "Next 90 days"
+            },
+            {
+              "icon": "FileBadge",
+              "name": "Certificate of service",
+              "status": "planned"
             }
           ]
         },
@@ -211,45 +273,15 @@ const CONFIG = {
           "type": "track",
           "span": 12,
           "rows": 2,
-          "title": "Automation to AI, step by step · where the HR policy advisor is today",
-          "at": 1
-        },
-        {
-          "type": "waves",
-          "big": true,
-          "span": 12,
-          "rows": 4,
-          "title": "WNS Transformation portfolio · done, under way, next 90 days",
-          "items": [
-            {
-              "when": "Done so far",
-              "name": "Groundwork",
-              "tone": "done",
-              "items": [
-                "HR automation pipeline identified: certificate of service, sales incentive upload, bursary payments, HRO OneView"
-              ]
-            },
-            {
-              "when": "Under way",
-              "name": "Being delivered now",
-              "tone": "doing",
-              "items": [
-                "EC and ECP testing support to go-live",
-                "B-BBEE training scorecard, with Analytics",
-                "Org Design platform: URS update and SuccessFactors API access",
-                "Payroll Control Center rules"
-              ]
-            },
-            {
-              "when": "Next 90 days",
-              "name": "What we will prove next",
-              "tone": "next",
-              "items": [
-                "HR policy advisor POC on real HRO queries",
-                "Certificate of service automation",
-                "Permissions and POPIA audit first"
-              ]
-            }
+          "title": "Org Design delivery path · where we are today",
+          "at": 0,
+          "steps": [
+            "Requirements (URS)",
+            "SuccessFactors access",
+            "Build",
+            "Test with HR",
+            "Go-live",
+            "Org dashboards"
           ]
         }
       ]
