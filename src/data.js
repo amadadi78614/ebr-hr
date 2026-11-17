@@ -91,7 +91,31 @@ const CONFIG = {
       ],
     },
     {
-      id: 'transformation', label: 'Transformation', title: 'Employee Central and Payroll go live on 1 March 2027',
+      id: 'analytics', owner: {   "name": "Dani Viljoen",   "role": "WNS Analytics" }, label: 'Analytics', title: 'A more reliable workforce decision layer',
+      blocks: [
+        {
+          type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · WNS Analytics · click for detail',
+          items: [
+            { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Tracks training spend and participation against Skills Development targets to identify gaps early. Controls compliance and removes surprises.' } },
+            { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
+            { icon: 'UserSearch', name: 'HR Talent Dashboard', line: 'Demographics and succession', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Identifies workforce risks, critical-role coverage and successor readiness.' } },
+            { icon: 'HeartPulse', name: 'Pensioners Medical Aid', line: 'Status and history in SharePoint', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Improves query resolution, auditability and compliance.' } },
+            { icon: 'CalendarClock', name: 'Leave Liability (LPA)', line: 'Accrued leave and value', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Supports month-end provisioning and proactive leave management.' } },
+            { icon: 'Inbox', name: 'HRO Mailbox Monitoring', line: 'Volumes, response times, backlog', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Exposes backlogs and improves employee service accountability.' } },
+          ],
+        },
+        {
+          type: 'rings', span: 4, rows: 4, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
+          items: [
+            { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
+            { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
+            { pct: 5, value: '5%', label: 'Cognitive', sub: 'Controlled execution', color: 'accent2' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'transformation', owner: {   "name": "Mohamed Nomani",   "role": "WNS Transformation · part of Capgemini" }, label: 'EC and ECP', title: 'Employee Central and Payroll go live on 1 March 2027',
       blocks: [
         {
           type: 'stepper', span: 12, rows: 3, title: 'EC and ECP implementation path', note: 'Go-live 1 March 2027',
@@ -117,52 +141,31 @@ const CONFIG = {
       ],
     },
     {
-      id: 'analytics', label: 'Analytics', title: 'A more reliable workforce decision layer',
-      blocks: [
-        {
-          type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · WNS Analytics · click for detail',
-          items: [
-            { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Tracks training spend and participation against Skills Development targets to identify gaps early. Controls compliance and removes surprises.' } },
-            { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
-            { icon: 'UserSearch', name: 'HR Talent Dashboard', line: 'Demographics and succession', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Identifies workforce risks, critical-role coverage and successor readiness.' } },
-            { icon: 'HeartPulse', name: 'Pensioners Medical Aid', line: 'Status and history in SharePoint', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Improves query resolution, auditability and compliance.' } },
-            { icon: 'CalendarClock', name: 'Leave Liability (LPA)', line: 'Accrued leave and value', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Supports month-end provisioning and proactive leave management.' } },
-            { icon: 'Inbox', name: 'HRO Mailbox Monitoring', line: 'Volumes, response times, backlog', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Exposes backlogs and improves employee service accountability.' } },
-          ],
-        },
-        {
-          type: 'rings', span: 4, rows: 4, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
-          items: [
-            { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
-            { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
-            { pct: 5, value: '5%', label: 'Cognitive', sub: 'Controlled execution', color: 'accent2' },
-          ],
-        },
-      ],
-    },
-    {
       "id": "ai",
-      "label": "AI journey",
-      "title": "WNS, part of Capgemini, is taking Telkom on the AI journey",
+      "label": "Transformation and AI",
+      "owner": {
+        "name": "Mohamed Nomani",
+        "role": "WNS Transformation · part of Capgemini"
+      },
+      "title": "From manual HR admin to governed HR AI",
       "blocks": [
         {
           "type": "hero",
           "items": [
             {
-              "value": "6",
-              "label": "Analytics products live",
-              "sub": "Headcount · talent · B-BBEE · leave liability",
+              "value": "EC + ECP",
+              "label": "Testing support",
+              "sub": "UAT and parallel runs",
               "tone": "good"
             },
             {
-              "value": "Built",
-              "label": "Talent and succession insight",
-              "sub": "HR Talent Dashboard",
-              "tone": "good"
+              "value": "URS",
+              "label": "Org Design platform",
+              "sub": "Replacing Nakisa, on SuccessFactors"
             },
             {
               "value": "1 Mar",
-              "label": "EC and ECP go-live",
+              "label": "Go-live",
               "sub": "Clean data is the base for HR AI"
             },
             {
@@ -176,26 +179,23 @@ const CONFIG = {
           "type": "track",
           "span": 12,
           "rows": 2,
-          "title": "How we take AI from idea to value · where the HR policy advisor is today",
-          "at": 1,
-          "flag": "the HR policy advisor"
+          "title": "Automation to AI, step by step · where the HR policy advisor is today",
+          "at": 1
         },
         {
           "type": "waves",
           "big": true,
           "span": 12,
           "rows": 4,
-          "title": "Done, under way, next 90 days",
+          "title": "WNS Transformation portfolio · done, under way, next 90 days",
           "items": [
             {
-              "when": "Done · proven with Telkom",
-              "name": "Built and in use",
+              "when": "Done · live at Telkom",
+              "name": "Delivered",
               "tone": "done",
               "items": [
-                "HR Talent Dashboard: demographics and succession",
-                "Headcount report automated",
-                "B-BBEE skills and leave liability tracking",
-                "HRO mailbox monitoring"
+                "Org Design platform requirements (URS) defined",
+                                "B-BBEE training scorecard model with Analytics"
               ]
             },
             {
@@ -203,9 +203,10 @@ const CONFIG = {
               "name": "Being delivered now",
               "tone": "doing",
               "items": [
-                "EC and ECP go-live on 1 March 2027",
-                "Payroll Control Center rules",
-                "Org Design platform on SuccessFactors data"
+                "EC and ECP testing support to go-live",
+                "B-BBEE training scorecard, with Analytics",
+                "Org Design platform build on SuccessFactors data",
+                "Payroll Control Center rules"
               ]
             },
             {
@@ -214,8 +215,8 @@ const CONFIG = {
               "tone": "next",
               "items": [
                 "HR policy advisor POC on real HRO queries",
-                "Permissions and POPIA audit first",
-                "Joule and Explain My Pay, against licences"
+                "Certificate of service automation",
+                "Permissions and POPIA audit first"
               ]
             }
           ]
