@@ -396,3 +396,12 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 .icards.feature.dense .icard small{font-size:14px}
 .icards.feature.dense .icard .ifoot{font-size:16px;padding-top:8px}
 @media (max-height:720px){.icards.feature.dense .ico{width:38px;height:38px}.icards.feature.dense .icard b{font-size:16px}.icards.feature.dense .icard small{font-size:12px}.icards.feature.dense .icard .ifoot{font-size:13px}}
+
+/* Feature cards: fill the height with content, no empty gap */
+.icards.feature .icard{justify-content:flex-start}
+.icards.feature .icard .irole{margin:10px 0 0;font-size:15px;line-height:1.45;color:#334155}
+.icards.feature .icard .irole b{display:block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.icards.feature .icard .ifoot{flex:1;margin:14px 0 0;display:flex;flex-direction:column;justify-content:center;padding:18px;border-top:none;border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 9%,#fff),color-mix(in srgb,var(--accent2) 12%,#fff));border:1px solid color-mix(in srgb,var(--accent2) 22%,#fff);font-size:19px;line-height:1.35}
+.icards.feature .icard .ifoot b{font-size:11px;margin-bottom:8px}
+.icards.feature .icard:hover .ifoot{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,#fff),color-mix(in srgb,var(--accent2) 18%,#fff))}
+@media (max-height:720px){.icards.feature .icard .ifoot{font-size:15px;padding:12px}.icards.feature .icard .irole{font-size:13px}}
