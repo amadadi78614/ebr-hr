@@ -241,7 +241,7 @@ function Cards({ b, open }) {
             {it.line && <small>{it.line}</small>}
             {!b.feature && !it.role && !it.foot && it.detail?.text && <p className="idesc">{it.detail.text}</p>}
             {it.team && <span className="team">{it.team}</span>}
-            {it.role && <p className="irole"><b>{b.roleLabel || 'WNS role'}</b>{it.role}</p>}
+            {it.role && <p className="irole"><b>{b.roleLabel || 'Capgemini role'}</b>{it.role}</p>}
             {it.foot && <p className="ifoot">{b.footLabel && <b>{b.footLabel}</b>}{it.foot}</p>}
             </>}
             {it.metric && <em>{it.metric}</em>}

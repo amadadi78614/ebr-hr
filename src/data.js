@@ -7,7 +7,7 @@ const CONFIG = {
   period: 'H1 FY27',
   accent: '#009FE3',
   accent2: '#FF6F4D',
-  source: 'WNS Operations, Transformation and Analytics · HRO EBR FY27 · H1 review',
+  source: 'Capgemini Operations, Transformation and Analytics · HRO EBR FY27 · H1 review',
   tabs: [
     {
       "id": "agenda",
@@ -42,21 +42,21 @@ const CONFIG = {
               "icon": "BarChart3",
               "tab": "analytics",
               "line": "Six HR analytics products · next frontier is prescriptive",
-              "who": "WNS Analytics"
+              "who": "Capgemini Analytics"
             },
             {
               "label": "Transformation: Org Design platform",
               "icon": "Network",
               "tab": "ai",
               "line": "Org Design platform on Employee Central, replacing Nakisa",
-              "who": "WNS Transformation"
+              "who": "Capgemini Transformation"
             },
             {
               "label": "AI strategy",
               "icon": "Sparkles",
               "tab": "aistrategy",
               "line": "SAP first, payroll safe: PCC rules, then Joule, then agents",
-              "who": "WNS Transformation"
+              "who": "Capgemini Transformation"
             },
             {
               "label": "Governance and decisions",
@@ -154,7 +154,7 @@ const CONFIG = {
               "name": "HR call centre",
               "line": "Helpdesk for all staff",
               "detail": {
-                "text": "WNS is the HR helpdesk for every Telkom and Openserve employee."
+                "text": "Capgemini is the HR helpdesk for every Telkom and Openserve employee."
               }
             },
             {
@@ -194,7 +194,7 @@ const CONFIG = {
           "cols": 4,
           "rows": 6,
           "feature": true,
-          "roleLabel": "WNS role",
+          "roleLabel": "Capgemini role",
           "footLabel": "What it unlocks",
           "title": "H1 highlights · click for detail",
           "items": [
@@ -207,7 +207,7 @@ const CONFIG = {
               "role": "Configured, tested and processed the new allowance in payroll",
               "foot": "Policy change live with no side payments",
               "detail": {
-                "text": "Telkom changed the policy; WNS built it into payroll and pays it every month."
+                "text": "Telkom changed the policy; Capgemini built it into payroll and pays it every month."
               }
             },
             {
@@ -219,7 +219,7 @@ const CONFIG = {
               "role": "Runs the call centre; tested the new platform and moved across while staying open to staff",
               "foot": "More features and better call handling than the old UAD application",
               "detail": {
-                "text": "Telkom chose Genesys Cloud; WNS is its only call centre user and runs HR calls on it."
+                "text": "Telkom chose Genesys Cloud; Capgemini is its only call centre user and runs HR calls on it."
               }
             },
             {
@@ -231,7 +231,7 @@ const CONFIG = {
               "role": "Tested payslip data before roll-out; now resolves employee Fiori queries",
               "foot": "Employees on self-service, ahead of Employee Central",
               "detail": {
-                "text": "Telkom rolled out Fiori; WNS provided the testing and now supports employees using it."
+                "text": "Telkom rolled out Fiori; Capgemini provided the testing and now supports employees using it."
               }
             },
             {
@@ -243,7 +243,7 @@ const CONFIG = {
               "role": "HR and payroll SMEs, hands-on across iteration testing and UAT",
               "foot": "A safe 1 March 2027 go-live",
               "detail": {
-                "text": "Most of H1 went into ECP: WNS brings the payroll expertise the implementation depends on."
+                "text": "Most of H1 went into ECP: Capgemini brings the payroll expertise the implementation depends on."
               }
             }
           ]
@@ -268,7 +268,7 @@ const CONFIG = {
               "line": "User acceptance testing, parallel testing, then go-live",
               "status": "progress",
               "detail": {
-                "text": "User acceptance testing and parallel payroll runs, then go-live on 1 March 2027. WNS provides testing support."
+                "text": "User acceptance testing and parallel payroll runs, then go-live on 1 March 2027. Capgemini provides testing support."
               },
               "foot": "UAT worked through · parallel payroll runs now · go-live 1 March 2027"
             },
@@ -301,7 +301,7 @@ const CONFIG = {
               "name": "Headcount reporting",
               "line": "One consistent view of headcount",
               "status": "progress",
-              "foot": "For executive reporting · WNS Analytics"
+              "foot": "For executive reporting · Capgemini Analytics"
             },
             {
               "icon": "Network",
@@ -309,7 +309,7 @@ const CONFIG = {
               "line": "SuccessFactors organisational design dashboard",
               "status": "progress",
               "statusText": "In design",
-              "foot": "Org Design platform in design · WNS Transformation"
+              "foot": "Org Design platform in design · Capgemini Transformation"
             }
           ],
           "feature": true,
@@ -319,10 +319,10 @@ const CONFIG = {
       ]
     },
     {
-      id: 'analytics', owner: {   "name": "Dani Viljoen",   "role": "WNS Analytics" }, label: 'Analytics', title: 'A more reliable workforce decision layer',
+      id: 'analytics', owner: {   "name": "Dani Viljoen",   "role": "Capgemini Analytics" }, label: 'Analytics', title: 'A more reliable workforce decision layer',
       blocks: [
         {
-          type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · WNS Analytics · click for detail',
+          type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · Capgemini Analytics · click for detail',
           items: [
             { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', detail: { text: 'Tracks training spend and participation against Skills Development targets, so gaps show early and compliance holds.' } },
             { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
@@ -348,7 +348,7 @@ const CONFIG = {
       "label": "Transformation",
       "owner": {
         "name": "Mohamed Nomani",
-        "role": "WNS Transformation · part of Capgemini"
+        "role": "Capgemini Transformation"
       },
       "title": "Org Design platform leads HR transformation",
       "blocks": [
@@ -371,7 +371,7 @@ const CONFIG = {
             }
           ],
           "core": {
-            "kicker": "WNS Transformation",
+            "kicker": "Capgemini Transformation",
             "name": "Org Design platform",
             "status": "progress",
             "statusText": "In design · URS"
@@ -478,7 +478,7 @@ const CONFIG = {
       "id": "aistrategy",
       "owner": {
         "name": "Mohamed Nomani",
-        "role": "WNS Transformation · part of Capgemini"
+        "role": "Capgemini Transformation"
       },
       "label": "AI strategy",
       "title": "AI strategy: SAP first, payroll safe",
@@ -526,7 +526,7 @@ const CONFIG = {
           "type": "track",
           "span": 8,
           "rows": 2,
-          "title": "How WNS takes any AI use case to value · HR policy advisor is at step 2",
+          "title": "How Capgemini takes any AI use case to value · HR policy advisor is at step 2",
           "at": 1,
           "steps": [
             "Business problem",

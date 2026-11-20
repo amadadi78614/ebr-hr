@@ -46,7 +46,7 @@ export default function App() {
       <div className="glow g1" /><div className="glow g2" />
       <header className="top">
         <div className="brand">
-          <img src="/wns-logo.png" alt="WNS" />
+          <span className="brand-name">Capgemini</span>
           <span className="divider" />
           <img src="/telkom-logo.png" alt="Telkom" />
         </div>
