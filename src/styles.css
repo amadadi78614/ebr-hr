@@ -213,7 +213,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 
 @media (max-height:720px){
   .jr-now{font-size:17px}.jr-label{font-size:12px}.jr-then{font-size:12.5px}
-  .top{padding:8px 24px}.scene{padding:0 24px 6px;gap:8px}.scene-head h2{font-size:22px}
+  .top{padding:8px 24px}.scene{padding:10px 24px 6px;gap:8px}.scene-head h2{font-size:22px}
   .stat{padding:10px 14px}.stat strong{font-size:30px}.stat p{margin-top:4px;font-size:12px}
   .grid{gap:10px}.card{padding:10px 12px;border-radius:14px}.dock{padding:4px 24px 8px}
   .ring-c b{font-size:18px}.st-body h4{font-size:17px}.icard{padding:10px}
@@ -405,3 +405,31 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 .icards.feature .icard .ifoot b{font-size:11px;margin-bottom:8px}
 .icards.feature .icard:hover .ifoot{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,#fff),color-mix(in srgb,var(--accent2) 18%,#fff))}
 @media (max-height:720px){.icards.feature .icard .ifoot{font-size:15px;padding:12px}.icards.feature .icard .irole{font-size:13px}}
+
+/* ---- Elevation pass (20 Nov) ---- */
+/* Agenda: one-line summary per item */
+.ag-txt{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.ag-txt b{font-size:24px;font-weight:600;letter-spacing:-.3px}
+.ag-txt small{font-size:14px;color:#5B6B7F;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-height:720px){.ag-txt b{font-size:19px}.ag-txt small{font-size:12.5px}}
+
+/* Grid cards: show the detail as body text so cards are full, not empty */
+.icards:not(.list):not(.feature) .icard{justify-content:flex-start;padding:16px 18px;gap:6px}
+.icard .idesc{margin:8px 0 0;padding-top:10px;border-top:1px dashed #D5DDE6;font-size:13.5px;line-height:1.45;color:#334155;text-align:left;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.icards:not(.list):not(.feature) .icard .team{margin-top:auto;align-self:flex-start}
+.icards:not(.list):not(.feature) .icard .icard-top{margin-bottom:6px}
+.icards:not(.list):not(.feature) .icard b{font-size:17px}
+.icards:not(.list):not(.feature) .icard small{font-size:13px}
+@media (max-height:720px){.icard .idesc{font-size:12px;padding-top:7px;margin-top:5px}.icards:not(.list):not(.feature) .icard{padding:12px 14px}.icards:not(.list):not(.feature) .icard b{font-size:15px}}
+
+/* Decisions: each ask is a full panel with context */
+.asks-list{justify-content:stretch;gap:10px}
+.asks-list div{flex:1;align-items:center;gap:14px;padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22)}
+.asks-list span{width:34px;height:34px;font-size:15px;font-weight:800}
+.asks-list p{font-size:15px;font-weight:600}
+.asks-list p small{display:block;margin-top:4px;font-size:12.5px;font-weight:400;opacity:.85;line-height:1.4}
+@media (max-height:720px){.asks-list p{font-size:13px}.asks-list p small{font-size:11.5px}.asks-list div{padding:8px 12px}}
+.rings-note{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:#5B6B7F;text-align:center}
+.icards:not(.list):not(.feature) .ico{width:40px;height:40px;border-radius:12px}
+.icards:not(.list):not(.feature) .icard-top{margin-bottom:2px}
+@media (max-height:720px){.icards:not(.list):not(.feature) .ico{width:34px;height:34px}.icards:not(.list):not(.feature) .icard{gap:4px}}

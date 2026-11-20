@@ -134,6 +134,7 @@ function Rings({ b, open }) {
           </div>
         ))}
       </div>
+      {b.caption && <p className="rings-note">{b.caption}</p>}
     </Card>
   )
 }
@@ -238,6 +239,7 @@ function Cards({ b, open }) {
             <div className="icard-top"><span className="ico"><Icon name={it.icon} /></span>{it.status && <Pill s={it.status} text={it.statusText} />}</div>
             <b>{it.name}</b>
             {it.line && <small>{it.line}</small>}
+            {!b.feature && !it.role && !it.foot && it.detail?.text && <p className="idesc">{it.detail.text}</p>}
             {it.team && <span className="team">{it.team}</span>}
             {it.role && <p className="irole"><b>{b.roleLabel || 'WNS role'}</b>{it.role}</p>}
             {it.foot && <p className="ifoot">{b.footLabel && <b>{b.footLabel}</b>}{it.foot}</p>}
@@ -421,7 +423,7 @@ function Agenda({ b }) {
           <a key={x.label} href={'#' + x.tab} className="ag-row" style={{ animationDelay: `${n * 110}ms` }}>
             <span className="ag-n">{String(n + 1).padStart(2, '0')}</span>
             <span className="ag-ico"><Icon name={x.icon} size={26} /></span>
-            <b>{x.label}</b>
+            <span className="ag-txt"><b>{x.label}</b>{x.line && <small>{x.line}</small>}</span>
             {x.who && <span className="ag-who">{x.who}</span>}
             <Icons.ChevronRight size={22} className="ag-go" />
           </a>
@@ -459,7 +461,10 @@ function Asks({ b }) {
   return (
     <Card b={b} className="asks">
       <div className="asks-list">
-        {b.items.map((a, n) => <div key={a}><span>{n + 1}</span><p>{a}</p></div>)}
+        {b.items.map((a, n) => {
+          const t = typeof a === 'string' ? a : a.text
+          return <div key={t}><span>{n + 1}</span><p>{t}{a.sub && <small>{a.sub}</small>}</p></div>
+        })}
       </div>
     </Card>
   )

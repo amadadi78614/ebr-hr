@@ -7,7 +7,7 @@ const CONFIG = {
   period: 'H1 FY27',
   accent: '#009FE3',
   accent2: '#FF6F4D',
-  source: 'WNS Operations, Transformation and Analytics · HRO EBR FY27 · HRO MBR Sep 2026 review',
+  source: 'WNS Operations, Transformation and Analytics · HRO EBR FY27 · H1 review',
   tabs: [
     {
       "id": "agenda",
@@ -22,40 +22,47 @@ const CONFIG = {
             {
               "label": "Executive summary",
               "icon": "BadgeCheck",
-              "tab": "summary"
+              "tab": "summary",
+              "line": "99%+ payroll accuracy · R199m paid monthly · 98% of queries resolved in target"
             },
             {
               "label": "H1 highlights",
               "icon": "Star",
-              "tab": "delivery"
+              "tab": "delivery",
+              "line": "Four platforms and policies delivered, with payroll unaffected"
             },
             {
               "label": "FY27 focus areas",
               "icon": "Target",
-              "tab": "focus"
+              "tab": "focus",
+              "line": "Six priorities, anchored on EC and ECP going live on 1 March 2027"
             },
             {
               "label": "Analytics",
               "icon": "BarChart3",
               "tab": "analytics",
+              "line": "Six HR analytics products · next frontier is prescriptive",
               "who": "WNS Analytics"
             },
             {
               "label": "Transformation: Org Design platform",
               "icon": "Network",
               "tab": "ai",
+              "line": "Org Design platform on Employee Central, replacing Nakisa",
               "who": "WNS Transformation"
             },
             {
               "label": "AI strategy",
               "icon": "Sparkles",
               "tab": "aistrategy",
+              "line": "SAP first, payroll safe: PCC rules, then Joule, then agents",
               "who": "WNS Transformation"
             },
             {
               "label": "Governance and decisions",
               "icon": "ShieldCheck",
-              "tab": "next"
+              "tab": "next",
+              "line": "Six gates before any AI · three decisions requested from Telkom"
             }
           ]
         }
@@ -317,16 +324,17 @@ const CONFIG = {
         {
           type: 'cards', span: 8, rows: 4, cols: 3, title: 'Six analytics products · WNS Analytics · click for detail',
           items: [
-            { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Tracks training spend and participation against Skills Development targets to identify gaps early. Controls compliance and removes surprises.' } },
-            { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
-            { icon: 'UserSearch', name: 'HR Talent Dashboard', line: 'Demographics and succession', status: 'live', statusText: 'New', team: 'Analytics', detail: { text: 'Identifies workforce risks, critical-role coverage and successor readiness.' } },
-            { icon: 'HeartPulse', name: 'Pensioners Medical Aid', line: 'Status and history in SharePoint', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Improves query resolution, auditability and compliance.' } },
-            { icon: 'CalendarClock', name: 'Leave Liability (LPA)', line: 'Accrued leave and value', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Supports month-end provisioning and proactive leave management.' } },
-            { icon: 'Inbox', name: 'HRO Mailbox Monitoring', line: 'Volumes, response times, backlog', status: 'complete', statusText: 'Maintained', team: 'Analytics', detail: { text: 'Exposes backlogs and improves employee service accountability.' } },
+            { icon: 'GraduationCap', name: 'B-BBEE Skills Development', line: 'Training spend vs targets', status: 'live', statusText: 'New', detail: { text: 'Tracks training spend and participation against Skills Development targets, so gaps show early and compliance holds.' } },
+            { icon: 'Users', name: 'HR Headcount Report', line: 'BU, grade, employment type', status: 'live', statusText: 'New', detail: { text: 'Automates the CoE headcount report, replacing manual compilation with a repeatable view.' } },
+            { icon: 'UserSearch', name: 'HR Talent Dashboard', line: 'Demographics and succession', status: 'live', statusText: 'New', detail: { text: 'Identifies workforce risks, critical-role coverage and successor readiness.' } },
+            { icon: 'HeartPulse', name: 'Pensioners Medical Aid', line: 'Status and history in SharePoint', status: 'complete', statusText: 'Maintained', detail: { text: 'Improves query resolution, auditability and compliance.' } },
+            { icon: 'CalendarClock', name: 'Leave Liability (LPA)', line: 'Accrued leave and value', status: 'complete', statusText: 'Maintained', detail: { text: 'Supports month-end provisioning and proactive leave management.' } },
+            { icon: 'Inbox', name: 'HRO Mailbox Monitoring', line: 'Volumes, response times, backlog', status: 'complete', statusText: 'Maintained', detail: { text: 'Exposes backlogs and improves employee service accountability.' } },
           ],
         },
         {
           type: 'rings', span: 4, rows: 4, size: 92, title: 'Data maturity · next frontier is prescriptive and cognitive',
+          caption: 'Reports, dashboards and forecasting are in place. Next: recommendations (prescriptive), then controlled execution through agents (cognitive).',
           items: [
             { pct: 100, value: '100%', label: 'Descriptive to predictive', sub: 'Hindsight, insight, foresight' },
             { pct: 20, value: '20%', label: 'Prescriptive', sub: 'What should we do?', color: 'accent2' },
@@ -609,9 +617,9 @@ const CONFIG = {
           "rows": 4,
           "title": "Decisions requested from Telkom",
           "items": [
-            "Confirm readiness gates for 1 March 2027",
-            "Approve SuccessFactors API access for the Org Design platform",
-            "Name the HR owner for Org Design sign-off"
+            { "text": "Confirm readiness gates for 1 March 2027", "sub": "UAT, parallel payroll runs and Payroll Control Center rules signed off before go-live" },
+            { "text": "Approve SuccessFactors API access for the Org Design platform", "sub": "The platform reads structure, positions and people from Employee Central" },
+            { "text": "Name the HR owner for Org Design sign-off", "sub": "One accountable owner to approve the URS and the design" }
           ]
         }
       ]
