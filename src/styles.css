@@ -434,3 +434,4 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 .icards:not(.list):not(.feature) .icard-top{margin-bottom:2px}
 @media (max-height:720px){.icards:not(.list):not(.feature) .ico{width:34px;height:34px}.icards:not(.list):not(.feature) .icard{gap:4px}}
 .brand-name{font-size:19px;font-weight:700;letter-spacing:-.2px;color:#0070AD;white-space:nowrap}
+.brand img.cg-logo{height:30px;width:auto}
