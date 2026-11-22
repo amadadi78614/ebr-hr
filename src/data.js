@@ -5,8 +5,8 @@ const CONFIG = {
   key: 'hr',
   domain: 'HR & Payroll',
   period: 'H1 FY27',
-  accent: '#009FE3',
-  accent2: '#FF6F4D',
+  accent: '#0070AD',
+  accent2: '#009FE3',
   source: 'Capgemini Operations, Transformation and Analytics · HRO EBR FY27 · H1 review',
   tabs: [
     {
