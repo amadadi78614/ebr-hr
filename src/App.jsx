@@ -1,25 +1,34 @@
 import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-import CONFIG from './data.js'
+import { DOMAINS } from './areas.js'
 import Block, { Icon, Pill } from './blocks.jsx'
 
+
+function parse() {
+  const [d, t] = window.location.hash.slice(1).split('/')
+  const dn = Math.max(0, DOMAINS.findIndex(x => x.key === d))
+  const tn = Math.max(0, DOMAINS[dn].tabs.findIndex(x => x.id === t))
+  return [dn, tn]
+}
+
 export default function App() {
+  const [[di, i], setPos] = useState(parse)
+  const CONFIG = DOMAINS[di]
   const tabs = CONFIG.tabs
-  const initial = Math.max(0, tabs.findIndex(t => '#' + t.id === window.location.hash))
-  const [i, setI] = useState(initial)
   const [drawer, setDrawer] = useState(null)
   useEffect(() => {
-    const onHash = () => { const n = tabs.findIndex(t => '#' + t.id === window.location.hash); if (n >= 0) { setI(n); setDrawer(null) } }
+    const onHash = () => { setPos(parse()); setDrawer(null) }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
   const go = n => {
     const next = (n + tabs.length) % tabs.length
-    setI(next)
+    setPos([di, next])
     setDrawer(null)
-    history.replaceState(null, '', '#' + tabs[next].id)
+    history.replaceState(null, '', '#' + CONFIG.key + '/' + tabs[next].id)
   }
+  const pick = n => { setPos([n, 0]); setDrawer(null); history.replaceState(null, '', '#' + DOMAINS[n].key + '/' + DOMAINS[n].tabs[0].id) }
 
   const step = d => setDrawer(x => x && x.list.length > 1 ? { ...x, i: (x.i + d + x.list.length) % x.list.length } : x)
 
@@ -51,12 +60,15 @@ export default function App() {
           <img src="/telkom-logo.png" alt="Telkom" />
         </div>
         <div className="title">
-          <h1>{CONFIG.domain}</h1>
-          <p>Welcome · {CONFIG.period} Executive Business Review</p>
+          <h1>Telkom Shared Services</h1>
+          <p>Welcome · H1 FY27 Executive Business Review</p>
         </div>
+        <nav className="domains" aria-label="Business area">
+          {DOMAINS.map((x, n) => <button key={x.key} aria-current={n === di ? 'page' : undefined} onClick={() => pick(n)}>{x.domain}</button>)}
+        </nav>
       </header>
 
-      <main className="scene" key={tab.id}>
+      <main className="scene" key={CONFIG.key + tab.id}>
         <div className="scene-head">
           <div className="scene-k">
             <span className="kicker">{String(i + 1).padStart(2, '0')} · {tab.label}</span>
@@ -65,13 +77,13 @@ export default function App() {
           <h2>{tab.title}</h2>
         </div>
         <div className="grid" style={{ gridTemplateRows: tab.blocks[0].type === 'hero' ? 'auto' : undefined }}>
-          {tab.blocks.map((b, n) => <Block key={n} b={b} open={setDrawer} idx={n} />)}
+          {tab.blocks.map((b, n) => <Block key={n} b={{ ...b, _d: CONFIG.key }} open={setDrawer} idx={n} />)}
         </div>
       </main>
 
-      <footer className="dock">
+      <footer className={'dock' + (tabs.length < 2 ? ' solo' : '')}>
         <button className="arrow" aria-label="Previous section" onClick={() => go(i - 1)}><ChevronLeft size={18} /></button>
-        <div className="steps-nav">
+        <div className={"steps-nav" + (tabs.length > 8 ? " dense" : "")}>
           {tabs.map((t, n) => (
             <button key={t.id} aria-current={n === i ? 'page' : undefined} onClick={() => go(n)}>
               <i className={n <= i ? 'on' : ''} />{t.label}

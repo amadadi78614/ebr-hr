@@ -395,7 +395,8 @@ function Arch({ b, open }) {
         <div className="arch-core">
           <span className="kicker">{b.core.kicker}</span>
           <b>{b.core.name}</b>
-          <MiniOrg />
+          {b.core.icon ? <span className="arch-core-ico"><Icon name={b.core.icon} size={44} /></span> : <MiniOrg />}
+          {b.core.sub && <small className="arch-core-sub">{b.core.sub}</small>}
           {b.core.status && <Pill s={b.core.status} text={b.core.statusText} />}
         </div>
         <div className="arch-flow"><i /><i /><i /><i /></div>
@@ -414,13 +415,49 @@ function Arch({ b, open }) {
 }
 
 
+/* ---------- Data maturity staircase ---------- */
+function Maturity({ b }) {
+  const n = b.items.length
+  return (
+    <Card b={b} className="mat-card">
+      <div className="mat">
+        <div className="mat-steps">
+          {b.items.map((x, i) => {
+            const r = 22, c = 2 * Math.PI * r, done = x.pct >= 100
+            return (
+              <div key={x.name} className={'mat-col' + (done ? ' done' : x.pct > 0 ? ' now' : '')} style={{ paddingTop: `${(n - 1 - i) * 9}%`, animationDelay: `${i * 120}ms` }}>
+                <svg viewBox="0 0 56 56" className="mat-gauge">
+                  <circle cx="28" cy="28" r={r} fill="none" stroke="#E3E8EF" strokeWidth="6" />
+                  <circle cx="28" cy="28" r={r} fill="none" stroke={done ? '#0E9F6E' : '#E07B00'} strokeWidth="6" strokeLinecap="round"
+                    strokeDasharray={`${(c * x.pct) / 100} ${c}`} transform="rotate(-90 28 28)" />
+                  <text x="28" y="32" textAnchor="middle" fontSize="12" fontWeight="700" fill="#231F20">{x.pct}%</text>
+                </svg>
+                <div className="mat-box">
+                  <b>{x.name}</b>
+                  <em>{x.q}</em>
+                  <p>{x.text}</p>
+                  <div className="mat-tools">{x.tools.map(t => <span key={t}>{t}</span>)}</div>
+                </div>
+              </div>
+            )
+          })}
+          <div className="mat-arrow"><span>Business value</span></div>
+        </div>
+        <div className="mat-bands" style={{ gridTemplateColumns: `${b.split}fr ${n - b.split}fr 34px` }}>
+          <span>{b.bands[0]}</span><span className="ai">{b.bands[1]}</span><i />
+        </div>
+      </div>
+    </Card>
+  )
+}
+
 /* ---------- Agenda ---------- */
 function Agenda({ b }) {
   return (
     <Card b={b} className="agenda-card">
-      <div className="agenda">
+      <div className={'agenda' + (b.items.length > 7 ? ' many' : '')}>
         {b.items.map((x, n) => (
-          <a key={x.label} href={'#' + x.tab} className="ag-row" style={{ animationDelay: `${n * 110}ms` }}>
+          <a key={x.label} href={'#' + (x.tab.includes('/') || !b._d ? x.tab : b._d + '/' + x.tab)} className="ag-row" style={{ animationDelay: `${n * 110}ms` }}>
             <span className="ag-n">{String(n + 1).padStart(2, '0')}</span>
             <span className="ag-ico"><Icon name={x.icon} size={26} /></span>
             <span className="ag-txt"><b>{x.label}</b>{x.line && <small>{x.line}</small>}</span>
@@ -509,6 +546,8 @@ export default function Block({ b, open, idx }) {
     case 'lead': return <Lead b={b} />
     case 'agenda': return <Agenda b={b} />
     case 'arch': return <Arch b={b} open={open} />
+    case 'maturity': return <Maturity b={b} />
+    case 'image': return <Card b={b}><div className="img-block"><img src={b.src} alt={b.alt || b.title} /></div>{b.footnote && <p className="footnote">{b.footnote}</p>}</Card>
     default: return null
   }
 }
