@@ -2,7 +2,7 @@
 import HR from './data.js'
 
 const tab = id => HR.tabs.find(t => t.id === id)
-const MOVED = ['analytics', 'ai', 'aistrategy']
+const MOVED = ['analytics', 'ai', 'aistrategy', 'next']
 const DANI = { name: 'Dani Viljoen', role: 'Capgemini Analytics' }
 
 const HRP = {
@@ -139,10 +139,10 @@ const OVERVIEW = area('overview', 'Overview', [{
     tab('summary').blocks.find(b => b.type === 'hero'),
     {
       type: 'agenda', span: 12, rows: 5, items: [
-        { label: 'HR & Payroll', icon: 'Users', tab: 'hr/agenda', line: 'Executive summary, H1 highlights, FY27 focus areas, governance and decisions' },
+        { label: 'HR & Payroll', icon: 'Users', tab: 'hr/agenda', line: 'Executive summary, H1 highlights, FY27 focus areas' },
         { label: 'Transformation', icon: 'Sparkles', tab: 'transformation/ai', line: 'Org Design platform, how it works and the HR transformation portfolio', who: 'Mohamed Nomani' },
         { label: 'Analytics', icon: 'BarChart3', tab: 'analytics/analytics', line: '6 months in review and the data maturity curve', who: 'Dani Viljoen' },
-        { label: 'AI', icon: 'BrainCircuit', tab: 'ai/learned', line: 'What we learned, the Microsoft POC and enablement, and the path to value', who: 'Mohamed and Dani' },
+        { label: 'AI', icon: 'BrainCircuit', tab: 'ai/learned', line: 'What we learned, Microsoft POC, path to value, governance and decisions', who: 'Mohamed and Dani' },
       ],
     },
   ],
@@ -153,5 +153,5 @@ export const DOMAINS = [
   HRP,
   area('transformation', 'Transformation', [tab('ai')]),
   area('analytics', 'Analytics', [ANALYTICS, MATURITY]),
-  area('ai', 'AI', [AI_LEARNED, AI_POC, AI_PATH]),
+  area('ai', 'AI', [AI_LEARNED, AI_POC, AI_PATH, { ...tab('next'), owner: { name: 'Mohamed Nomani · Dani Viljoen', role: 'Capgemini Transformation and Analytics' } }]),
 ]
